@@ -11,10 +11,9 @@ import { NavLink } from  "react-router-dom";
 const useStyles = makeStyles((theme) => ({
   root: {
       margin: "0vh",
-      position: "sticky",
       top: "0",
       zIndex: "1",
-      background: "transparent",
+      background: "#02012e",
       padding: "2vh",
   },
   menu: {

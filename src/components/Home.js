@@ -10,7 +10,9 @@ import Footer from "./Footer";
 const useStyles = makeStyles((theme) => ({
     root: {
         backgroundColor: '#02012e',
-        paddingBottom: "100vh",
+        paddingBottom: "0vh",
+        width: "100%",
+        overflowX: "hidden",
     },
     name: {
         marginTop: "10vh",
@@ -43,7 +45,7 @@ const useStyles = makeStyles((theme) => ({
     projects: {
         width: "100%",
         height: "1000px",
-        backgroundColor: "black",
+        backgroundColor: "white",
     },
     "@keyframes fade": {
         "0%": {
@@ -71,6 +73,10 @@ export default function Home() {
                     <Typed/>
                 </div>
         </div>
+        <div className={classes.projects}>
+            
+        </div>
+        <Footer/>
     </ThemeProvider>
   );
 }

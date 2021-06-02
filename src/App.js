@@ -9,6 +9,7 @@ import Home from "./components/Home";
 import About from "./components/About";
 import { ThemeProvider } from '@material-ui/core'
 import myTheme from './components/themes/myTheme'
+import "./App.css";
 
 
 function App() {

@@ -11,12 +11,12 @@ const useStyles = makeStyles((theme) => ({
       marginLeft: "0vh",
       top: "0",
       zIndex: "100",
-      background: "White",
-      padding: "5vh",
+      background: "#02012e",
+      paddingBottom: "40px",
   },
   button: {
       fontSize: '10vh',
-      color: "#02012e",
+      color: "white",
       margin: "2vh",
       "&:hover": {
         color: "#ede477",
@@ -29,11 +29,17 @@ const useStyles = makeStyles((theme) => ({
   },
   container: {
       display: "flex",
+      flexDirection: "row",
+      justifyContent: "center",
+      alightItems: "center",
   },
   icon: {
     fontSize: "4vh",
     backgroundColor: "transparent",
   },
+  copyright: {
+    color: "white",
+  }
 }));
 
 export default function Footer() {
@@ -67,6 +73,11 @@ export default function Footer() {
                 >
                     <LinkedInIcon className={classes.icon}/>
                 </IconButton>
+            </div>
+            <div className={classes.container}>
+                <div className={classes.copyright}>
+                    &copy; 2021 All rights reserved Evan Slack
+                </div>
             </div>
         </div>
     </ThemeProvider>
