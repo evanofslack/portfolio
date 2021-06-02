@@ -3,9 +3,9 @@ import ReactDOM from "react-dom";
 import App from './App'
 import 'typeface-mada';
 import 'typeface-karla';
+import Home from './components/Home';
 
 ReactDOM.render(
-  <App>
-  </App>,
+  <App/>,
   document.getElementById("root")
 );
