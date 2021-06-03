@@ -9,19 +9,20 @@ import Footer from "./Footer";
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        //backgroundColor: '#02012e',
-        background: "#0a1338",
-        paddingBottom: "0vh",
+        height: "100vh",
         width: "100%",
         overflow: "auto",
-        //overflowX: "hidden",
+    },
+    container: {
+        //backgroundColor: '#02012e',
+        background: "#0a1338",
     },
     name: {
-        marginTop: "10vh",
-        marginLeft: "10%",
+        marginTop: "4vw",
+        marginLeft: "8%",
         marginRight: "5%",
-        marginBottom: "6vh",
-        fontSize: "7vh",
+        marginBottom: "2vw",
+        fontSize: "5vw",
         color: 'white',
         animation: "fade 1s",
     },
@@ -35,14 +36,6 @@ const useStyles = makeStyles((theme) => ({
             WebkitBackgroundClip: "text",
             color: "transparent",
           }
-    },
-    subtitle: {
-        fontSize: "14vh",
-        color: "white",
-        marginLeft: "10%",
-        marginRight: "5",
-        marginBottom: "10vh",
-        whiteSpace: "nowrap",
     },
     projects: {
         width: "100%",
@@ -64,21 +57,23 @@ export default function Home() {
   return (
     <ThemeProvider theme={myTheme}> 
         <div className={classes.root}>
-            <Navbar/>
-                <div className={classes.fade}>
-                    <div className={classes.name}>
-                        Hi! I'm 
-                        <HoverShine>
-                            &nbsp;Evan Slack
-                        </HoverShine>
+            <div className={classes.container}>
+                <Navbar/>
+                    <div className={classes.fade}>
+                        <div className={classes.name}>
+                            Hi! I'm 
+                            <HoverShine>
+                                &nbsp;Evan Slack
+                            </HoverShine>
+                        </div>
+                        <Typed/>
                     </div>
-                    <Typed/>
-                </div>
+            </div>
+            <div className={classes.projects}>
+                
+            </div>
+            <Footer/>
         </div>
-        <div className={classes.projects}>
-            
-        </div>
-        <Footer/>
     </ThemeProvider>
   );
 }

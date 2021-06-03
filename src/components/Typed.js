@@ -6,13 +6,14 @@ import Typewriter from "typewriter-effect";
 
 const useStyles = makeStyles((theme) => ({
     subtitle: {
-        fontSize: "14vh",
+        fontSize: "9vw",
         color: "white",
-        marginLeft: "10%",
-        marginRight: "5",
-        marginBottom: "10vh",
-        whiteSpace: "nowrap",
+        marginLeft: "8%",
+        marginRight: "5%",
+        paddingBottom: "10vw",
         animation: "$fade ease 2s",
+        wordWrap: "break-word",
+        overflowWrap: "break-word",
     },
     "@keyframes fade": {
         "0%": {

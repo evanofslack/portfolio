@@ -3,10 +3,12 @@ import emailjs from 'emailjs-com';
 import Swal from 'sweetalert2'
 import { makeStyles } from "@material-ui/core/styles";
 import { useForm } from 'react-hook-form';
+import Button from '@material-ui/core/Button';
+import SendIcon from '@material-ui/icons/Send';
 
 const useStyles = makeStyles((theme) => ({
     title: {
-        fontSize: "4vw",
+      fontSize: "calc(14px + 2vw)",
         color: "#0a1338",
     },
     input: {
@@ -14,6 +16,8 @@ const useStyles = makeStyles((theme) => ({
         padding: "8px 8px",
         marginTop: "30px",
         boxSizing: "border-box",
+        fontFamily: "mada",
+        fontSize: "1rem",
         borderStyle: "solid",
         border: "1.5px",
         borderRadius: "3px",
@@ -27,6 +31,8 @@ const useStyles = makeStyles((theme) => ({
     },
     message: {
         width: "60vw",
+        fontFamily: "mada",
+        fontSize: "1rem",
         height: "10em",
         padding: "8px 8px",
         marginTop: "30px",
@@ -43,7 +49,7 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     alert: {
-      fontSize: "1vw",
+      fontSize: "calc(10px + .5vw)",
       color: "red",
     },
     submit: {
@@ -54,10 +60,13 @@ const useStyles = makeStyles((theme) => ({
       borderStyle: "solid",
       padding: "10px 20px",
       borderRadius: "5px",
-      fontSize: "1.5vw",
+      fontSize: "calc(10px + .5vw)",
       fontWeight: "650",
       webkitTransition: "0.5s",
       transition: "0.5s",
+      "&:before": {
+        content: "\f1d8",
+      },
       "&:hover": {
         color: "#0a1338",
         background: "#dff7f6",
@@ -133,8 +142,13 @@ export default function Email() {
             placeholder='Message'/>
             {errors.message && <p className={classes.alert}>⚠ Name is required</p>}
           <br/>
-
-        <input className={classes.submit} type="submit" value="Send" />
+        <Button
+            type="submit"
+            className={classes.submit}
+            startIcon={<SendIcon/>}
+            >
+            Send
+          </Button>
       </form>
     </div>
     

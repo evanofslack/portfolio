@@ -15,13 +15,14 @@ const useStyles = makeStyles((theme) => ({
       zIndex: "1",
       //background: "#02012e",
       background: "#0a1338",
-      padding: "2vh",
+      padding: "2vw",
   },
   menu: {
       fontFamily: 'karla',
-      fontSize: '2.5vh',
+      fontSize: "calc(10px + 1vw)",
+      //fontSize: '2.5vw',
       color: "white",
-      margin: "1.6vh",
+      margin: "1.6vw",
       "&:hover": {
         color: "#ede477",
         textDecoration: "underline",
