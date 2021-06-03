@@ -4,11 +4,19 @@ import Navbar from "./Navbar";
 import { ThemeProvider } from '@material-ui/core'
 import myTheme from './themes/myTheme'
 import HoverShine from "./HoverShine";
+import Footer from "./Footer";
 
 const useStyles = makeStyles((theme) => ({
+    
     root: {
-        backgroundColor: '#02012e',
-        paddingBottom: "5vh",
+        height: "100vh",
+        overflow: "auto",
+
+    },
+    container: {
+        background: "#0a1338",
+        //paddingBottom: "5vh",
+        paddingBottom: "2000px",
     },
     name: {
         marginTop: "10vh",
@@ -49,14 +57,18 @@ export default function About() {
   return (
     <ThemeProvider theme={myTheme}> 
         <div className={classes.root}>
-            <Navbar/>
-            <div className={classes.name}>
-                Hi! learn more about
-                <HoverShine>
-                    &nbsp;ME
-                </HoverShine>
+            <div className={classes.container}>
+                <Navbar/>
+                <div className={classes.name}>
+                    Hi! learn more about
+                    <HoverShine>
+                        &nbsp;ME
+                    </HoverShine>
+                </div>
             </div>
+            <Footer/>
         </div>
+        
     </ThemeProvider>
   );
 }

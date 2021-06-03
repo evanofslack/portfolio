@@ -11,7 +11,8 @@ const useStyles = makeStyles((theme) => ({
       marginLeft: "0vh",
       top: "0",
       zIndex: "100",
-      background: "#02012e",
+      //background: "#02012e",
+      background: "#0a1338",
       paddingBottom: "40px",
   },
   button: {

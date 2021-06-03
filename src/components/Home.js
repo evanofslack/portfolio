@@ -9,10 +9,12 @@ import Footer from "./Footer";
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        backgroundColor: '#02012e',
+        //backgroundColor: '#02012e',
+        background: "#0a1338",
         paddingBottom: "0vh",
         width: "100%",
-        overflowX: "hidden",
+        overflow: "auto",
+        //overflowX: "hidden",
     },
     name: {
         marginTop: "10vh",
