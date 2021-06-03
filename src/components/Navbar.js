@@ -13,7 +13,8 @@ const useStyles = makeStyles((theme) => ({
       margin: "0vh",
       top: "0",
       zIndex: "1",
-      background: "#02012e",
+      //background: "#02012e",
+      background: "#0a1338",
       padding: "2vh",
   },
   menu: {
