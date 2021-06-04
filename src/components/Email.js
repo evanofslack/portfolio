@@ -178,19 +178,23 @@ const useStyles = makeStyles((theme) => ({
 export default function Email() {
     const classes = useStyles();
     const { register, formState: { errors }, handleSubmit } = useForm();
+    
 
-  function sendEmail(datda, e) {
+  function sendEmail(data, e) {
     e.preventDefault();
+    const form = document.querySelector('#contact-form');
 
     emailjs.sendForm('outlook', 'basic', e.target, 'user_6PEnWgQ1LFiBmJrspbPFv')
       .then((result) => {
-          console.log(result.text);
+          //console.log(result.text);
           Swal.fire({
             title: 'Email Successfully Sent',
             icon: 'success'
           })
-      }, (error) => {
-          console.log(error.text);
+          form.reset();}, 
+          
+      (error) => {
+          //console.log(error.text);
           Swal.fire({
             title: 'Email Failed to Send',
             icon: 'error'
@@ -201,8 +205,9 @@ export default function Email() {
   return (
     <div>
       <div className={classes.title}>Let's Connect:</div>
-      <form className={classes.form} onSubmit={handleSubmit(sendEmail)}>
+      <form className={classes.form} id='contact-form' onSubmit={handleSubmit(sendEmail)}>
         <div className={classes.container}>
+
           <label className={classes.labelName}>Name:</label>
           <input 
             className={classes.inputName} 
