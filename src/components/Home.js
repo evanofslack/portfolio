@@ -6,6 +6,7 @@ import myTheme from './themes/myTheme'
 import Typed from "./Typed";
 import HoverShine from "./HoverShine";
 import Footer from "./Footer";
+import { NavigateBeforeSharp } from "@material-ui/icons";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -21,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
         marginLeft: "8%",
         marginRight: "5%",
         marginBottom: "2vw",
-        fontSize: "5vw",
+        fontSize: "8vw",
         color: 'white',
         animation: "fade 1s",
     },
@@ -35,6 +36,22 @@ const useStyles = makeStyles((theme) => ({
             WebkitBackgroundClip: "text",
             color: "transparent",
           }
+    },
+    typeContainer: {
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "flex-start",
+        alignItems: "center",
+        marginLeft: "8%",
+        marginRight: "5%",
+        paddingBottom: "10vw",
+    },
+    typing: {
+        color: "#1fdbb1",
+        fontSize: "5.5vw",
+        animation: "$fade ease 2s",
+        wordWrap: "break-word",
+        overflowWrap: "break-word",
     },
     projects: {
         width: "100%",
@@ -62,10 +79,17 @@ export default function Home() {
                         <div className={classes.name}>
                             Hi! I'm 
                             <HoverShine>
-                                &nbsp;Evan Slack
+                                &nbsp; Evan
                             </HoverShine>
                         </div>
-                        <Typed/>
+                        <div className={classes.typeContainer}>
+                            <div className={classes.typing}>
+                                {""} I &nbsp; 
+                            </div>
+                            <div className={classes.typing}>
+                                <Typed/>
+                            </div>
+                        </div>
                     </div>
             </div>
             <div className={classes.projects}>

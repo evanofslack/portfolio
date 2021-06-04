@@ -6,14 +6,14 @@ import Typewriter from "typewriter-effect";
 
 const useStyles = makeStyles((theme) => ({
     subtitle: {
-        fontSize: "9vw",
-        color: "white",
-        marginLeft: "8%",
-        marginRight: "5%",
-        paddingBottom: "10vw",
-        animation: "$fade ease 2s",
-        wordWrap: "break-word",
-        overflowWrap: "break-word",
+       // fontSize: "6vw",
+        //color: "black",
+       // marginLeft: "8%",
+        //marginRight: "5%",
+        //paddingBottom: "10vw",
+        //animation: "$fade ease 2s",
+        //wordWrap: "break-word",
+        //overflowWrap: "break-word",
     },
     "@keyframes fade": {
         "0%": {
@@ -30,28 +30,20 @@ export default function Typed() {
   return (
     <ThemeProvider theme={myTheme}> 
         <div className={classes.subtitle}>
+
             <Typewriter
             options={{
+                strings: [
+                "design products ",
+                "build robots ",
+                "integrate electronics ",
+                "create prototypes ",
+                "write software ",
+                "layout PCBs ",
+                ],
                 autoStart: true,
                 loop: true,
-             }}
-            onInit={(typewriter) => {
-                typewriter.typeString('<span style="color: white;">I design <b>products</b></span>')
-                .pauseFor(1000)
-                .deleteChars(15)
-                .typeString('<span style="color: white;">build <b>robots</b></span>')                    
-                .pauseFor(1000)
-                .deleteChars(12)
-                .typeString('<span style="color: white;">create <b>prototypes</b></span>')
-                .pauseFor(1000)
-                .deleteChars(17)
-                .typeString('<span style="color: white;">write <b>software</b></span>')                    
-                .pauseFor(1000)
-                .deleteChars(14)
-                .typeString('<span style="color: white;">layout <b>PCBs</b></span>')
-                .pauseFor(1000)
-                .deleteChars(11)
-                .start();
+                cursor: "_",
             }}
             />
         </div>
