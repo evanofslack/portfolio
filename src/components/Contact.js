@@ -25,12 +25,8 @@ export default function Contact() {
   return (
     <ThemeProvider theme={myTheme}> 
     <div className={classes.root}>
-        <div className={classes.container}>
-            <Navbar/>
-        </div>
-        <div className={classes.name}>
-            <Email/>
-        </div>
+        <div className={classes.container}><Navbar/></div>
+        <div className={classes.name}><Email/></div>
         <Footer/>
     </div>
     </ThemeProvider>

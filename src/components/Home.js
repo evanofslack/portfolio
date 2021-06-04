@@ -14,7 +14,6 @@ const useStyles = makeStyles((theme) => ({
         overflow: "auto",
     },
     container: {
-        //backgroundColor: '#02012e',
         background: "#0a1338",
     },
     name: {
@@ -70,7 +69,6 @@ export default function Home() {
                     </div>
             </div>
             <div className={classes.projects}>
-                
             </div>
             <Footer/>
         </div>
