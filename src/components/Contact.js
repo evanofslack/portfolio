@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
     },
     name: {
         backgroundColor: "white",
-        padding: "6vw",
+        padding: "5vw",
     },
 })
 )

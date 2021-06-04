@@ -10,33 +10,26 @@ const useStyles = makeStyles((theme) => ({
     title: {
       fontSize: "calc(16px + 2vw)",
         color: "#0a1338",
-        paddingBottom: "3vw",
+        paddingBottom: "20px",
     },
     container: {
       display: "grid",
-      gridTemplateColumns: "1fr 12fr",
-      gridTemplateRows: "auto",
+      gridTemplateColumns: "1fr 1fr",
+      gridTemplateRows: "1fr 1fr 1fr 1fr 1fr 1fr",
       gridTemplateAreas:`
         "labelName inputName"
-        ". alertName"
+        ". nameAlert"
         "labelEmail  inputEmail"
-        ". alertEmail"
+        ". emailAlert"
         "labelMessage inputMessage"
-        ". alertMessage"
-        ". submit"
-        `,
+        ". messageAlert"`,
     },
-    form: {
-      //display: "flex",
-    },
-    inputName: {
+    name: {
       gridArea: "inputName",
-      alignSelf: "center",
-      width: "calc(100px + 10vw)",
+      width: "30vw",
       padding: "8px 8px",
       marginTop: "15px",
       marginBottom: "15px",
-      marginLeft: "7px",
       boxSizing: "border-box",
       fontFamily: "mada",
       fontSize: "calc(10px + 1vw)",
@@ -51,14 +44,12 @@ const useStyles = makeStyles((theme) => ({
         backgroundColor: "#f5f5f5",
       },
     },
-    inputEmail: {
-      alignSelf: "center",
+    email: {
       gridArea: "inputEmail",
-      width: "calc(120px + 20vw)",
+      width: "45vw",
       padding: "8px 8px",
       marginTop: "15px",
       marginBottom: "15px",
-      marginLeft: "7px",
       boxSizing: "border-box",
       fontFamily: "mada",
       fontSize: "calc(10px + 1vw)",
@@ -73,7 +64,7 @@ const useStyles = makeStyles((theme) => ({
         backgroundColor: "#f5f5f5",
       },
     },
-    inputMessage: {
+    message: {
       gridArea: "inputMessage",
       width: "60vw",
       fontFamily: "mada",
@@ -82,7 +73,6 @@ const useStyles = makeStyles((theme) => ({
       padding: "8px 8px",
       marginTop: "15px",
       marginBottom: "15px",
-      marginLeft: "7px",
       boxSizing: "border-box",
       borderStyle: "solid",
       border: "1.5px",
@@ -100,7 +90,8 @@ const useStyles = makeStyles((theme) => ({
       fontFamily: "mada",
       fontSize: "calc(10px + 1vw)",
       fontWeight: "400",
-      justifySelf: "right",
+      display: "block",
+      justifySelf: "center",
       alignSelf: "center",
       gridArea: "labelName",
     },
@@ -109,7 +100,8 @@ const useStyles = makeStyles((theme) => ({
       fontFamily: "mada",
       fontSize: "calc(10px + 1vw)",
       fontWeight: "400",
-      justifySelf: "right",
+      display: "block",
+      justifySelf: "center",
       alignSelf: "center",
       gridArea: "labelEmail",
     },
@@ -118,7 +110,8 @@ const useStyles = makeStyles((theme) => ({
       fontFamily: "mada",
       fontSize: "calc(10px + 1vw)",
       fontWeight: "400",
-      justifySelf: "right",
+      display: "block",
+      justifySelf: "center",
       alignSelf: "center",
       gridArea: "labelMessage",
     },
@@ -126,35 +119,33 @@ const useStyles = makeStyles((theme) => ({
       gridArea: "alertName",
       fontSize: "calc(10px + .5vw)",
       color: "#b50000",
-      justifySelf: "left",
+      display: "block",
+      justifySelf: "center",
       alignSelf: "center",
     },
     alertEmail: {
       gridArea: "alertEmail",
       fontSize: "calc(10px + .5vw)",
       color: "#b50000",
-      justifySelf: "left",
+      display: "block",
+      justifySelf: "center",
       alignSelf: "center",
     },
     alertMessage: {
       gridArea: "alertMessage",
       fontSize: "calc(10px + .5vw)",
       color: "#b50000",
-      justifySelf: "left",
+      display: "block",
+      justifySelf: "center",
       alignSelf: "center",
     },
     submit: {
-      justifySelf: "left",
-      alignSelf: "center",
-      gridArea: "submit",
       color: "#0a1338",
       background: "white",
       border: "2px",
       borderColor: "#0a1338",
       borderStyle: "solid",
       padding: "10px 20px",
-      marginTop: "15px",
-      marginLeft: "7px",
       borderRadius: "5px",
       fontSize: "calc(10px + .5vw)",
       fontWeight: "650",
@@ -164,9 +155,7 @@ const useStyles = makeStyles((theme) => ({
       //transition: "0.8s",
       "&:hover": {
         color: "#0a1338",
-        textDecoration: "underline",
-        textDecorationThickness: ".3vh",
-        //background: "#f6f1bb radial-gradient(circle, transparent 1%, #47a7f5 1%) center/15000%"
+        background: "#f6f1bb radial-gradient(circle, transparent 1%, #47a7f5 1%) center/15000%"
       },
       "&active": {
         backgroundColor: "#ede477",
@@ -184,7 +173,7 @@ export default function Email() {
     const classes = useStyles();
     const { register, formState: { errors }, handleSubmit } = useForm();
 
-  function sendEmail(datda, e) {
+  function sendEmail(e) {
     e.preventDefault();
 
     emailjs.sendForm('outlook', 'basic', e.target, 'user_6PEnWgQ1LFiBmJrspbPFv')
@@ -211,7 +200,7 @@ export default function Email() {
       <form className={classes.form} onSubmit={handleSubmit(sendEmail)}>
         <div className={classes.container}>
           <label className={classes.labelName}>
-            Name:
+            Name: &nbsp;
           </label>
           <input 
             className={classes.inputName} 
@@ -221,26 +210,26 @@ export default function Email() {
             {...register("user_name", {
                 required: true,
               })}
-            placeholder='First Last' />
-          {errors.user_name && <div className={classes.alertName}>⚠ Name is required</div>}
+            placeholder='Name' />
+          {errors.user_name && <p className={classes.alertName}>⚠ Name is required</p>}
             
         
           <label className={classes.labelEmail}>
-            Email: 
+            Email: &nbsp;
           </label>
           <input 
-            className={classes.inputEmail} 
+            className={classes.labelEmail} 
             type="email" 
             name="email" 
             aria-invalid={errors.email ? "true" : "false"}
             {...register("email", {
                 required: true,
               })}
-            placeholder='first.last@example.com' />
-          {errors.email && <div className={classes.alertEmail}>⚠ Email is required</div>}
+            placeholder='Email' />
+          {errors.email && <p className={classes.alertEmail}>⚠ Email is required</p>}
           
           <label className={classes.labelMessage}>
-            Message:
+            Message: &nbsp;
           </label>
           <textarea 
               className={classes.inputMessage} 
@@ -250,20 +239,18 @@ export default function Email() {
               {...register("message", {
                   required: true,
                 })}
-              placeholder='Type something...'/>
-            {errors.message && <div className={classes.alertMessage}>⚠ Message is required</div>}
-
-            <Button
+              placeholder='Message'/>
+            {errors.message && <p className={classes.alertMessage}>⚠ Message is required</p>}
+          </div>
+            <br/>
+          
+        <Button
             type="submit"
             className={classes.submit}
             startIcon={<SendIcon/>}
             >
             Send
           </Button>
-        </div>
-            <br/>
-          
-        
       </form>
     </div>
   );
