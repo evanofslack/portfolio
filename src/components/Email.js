@@ -9,8 +9,8 @@ import SendIcon from '@material-ui/icons/Send';
 const useStyles = makeStyles((theme) => ({
     title: {
       fontSize: "calc(16px + 2vw)",
-        color: "#0a1338",
-        paddingBottom: "3vw",
+      color: "#0a1338",
+      paddingBottom: "3vw",
     },
     container: {
       display: "grid",
@@ -25,9 +25,6 @@ const useStyles = makeStyles((theme) => ({
         ". alertMessage"
         ". submit"
         `,
-    },
-    form: {
-      //display: "flex",
     },
     inputName: {
       gridArea: "inputName",
@@ -160,13 +157,11 @@ const useStyles = makeStyles((theme) => ({
       fontWeight: "650",
       backgroundPosition: "center",
       transition: "background 0.8s",
-      //webkitTransition: "0.5s",
-      //transition: "0.8s",
+      webkitTransition: "background 0.8s",
       "&:hover": {
         color: "#0a1338",
         textDecoration: "underline",
         textDecorationThickness: ".3vh",
-        //background: "#f6f1bb radial-gradient(circle, transparent 1%, #47a7f5 1%) center/15000%"
       },
       "&active": {
         backgroundColor: "#ede477",
@@ -205,14 +200,10 @@ export default function Email() {
 
   return (
     <div>
-      <div className={classes.title}>
-        Let's Connect:
-      </div>
+      <div className={classes.title}>Let's Connect:</div>
       <form className={classes.form} onSubmit={handleSubmit(sendEmail)}>
         <div className={classes.container}>
-          <label className={classes.labelName}>
-            Name:
-          </label>
+          <label className={classes.labelName}>Name:</label>
           <input 
             className={classes.inputName} 
             type="text" 
@@ -224,10 +215,7 @@ export default function Email() {
             placeholder='First Last' />
           {errors.user_name && <div className={classes.alertName}>⚠ Name is required</div>}
             
-        
-          <label className={classes.labelEmail}>
-            Email: 
-          </label>
+          <label className={classes.labelEmail}>Email:</label>
           <input 
             className={classes.inputEmail} 
             type="email" 
@@ -239,9 +227,7 @@ export default function Email() {
             placeholder='first.last@example.com' />
           {errors.email && <div className={classes.alertEmail}>⚠ Email is required</div>}
           
-          <label className={classes.labelMessage}>
-            Message:
-          </label>
+          <label className={classes.labelMessage}>Message:</label>
           <textarea 
               className={classes.inputMessage} 
               type="text"
@@ -253,17 +239,10 @@ export default function Email() {
               placeholder='Type something...'/>
             {errors.message && <div className={classes.alertMessage}>⚠ Message is required</div>}
 
-            <Button
-            type="submit"
-            className={classes.submit}
-            startIcon={<SendIcon/>}
-            >
-            Send
-          </Button>
+            <Button type="submit" className={classes.submit} startIcon={<SendIcon/>}>
+              Send
+            </Button>
         </div>
-            <br/>
-          
-        
       </form>
     </div>
   );
