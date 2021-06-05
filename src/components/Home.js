@@ -6,7 +6,6 @@ import myTheme from './themes/myTheme'
 import Typed from "./Typed";
 import HoverShine from "./HoverShine";
 import Footer from "./Footer";
-import { NavigateBeforeSharp } from "@material-ui/icons";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -47,7 +46,7 @@ const useStyles = makeStyles((theme) => ({
         paddingBottom: "10vw",
     },
     typing: {
-        color: "#1fdbb1",
+        color: "#00c297",
         fontSize: "5.5vw",
         animation: "$fade ease 2s",
         wordWrap: "break-word",
