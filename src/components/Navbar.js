@@ -49,6 +49,7 @@ export default function Navbar() {
         <div className={classes.root}>
             <Toolbar>
                 <div className={classes.container}>
+
                     <Button
                         disableRipple
                         className={classes.menu}
@@ -57,6 +58,7 @@ export default function Navbar() {
                     >
                         Home
                     </Button>
+
                     <Button
                         disableRipple
                         className={classes.menu}
@@ -65,6 +67,7 @@ export default function Navbar() {
                     >
                         About
                     </Button>
+
                     <Button
                         disableRipple
                         className={classes.menu}
@@ -73,6 +76,7 @@ export default function Navbar() {
                     >
                         Contact
                     </Button>
+                    
                 </div>
             </Toolbar>
         </div>
