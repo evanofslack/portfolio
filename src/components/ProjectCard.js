@@ -4,18 +4,19 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles({
   imageContainer: {
-    margin: "0",
+    margin: "1vw",
     padding: "0",
-    //maxWidth: "50%",
-    //minWidth: "350px",
-    width: "50vw",
-    height: "50vh",
-    //maxHeight: "350px",
+    width: "40vw",
+    height: "30vh",
+    minWidth: "350px",
+    minHeight: "350px",
+    maxWidth: "450px",
+    maxHeight: "auto",
     overflow: "hidden",
     position: "relative",
-    //display: "flex",
-    //justifyContent: "space-around",
-    //alignItems: "center",
+    display: "flex",
+    justifyContent: "space-around",
+    alignItems: "center",
   },
   image: {
     maxWidth: "100%",
@@ -30,23 +31,34 @@ const useStyles = makeStyles({
     left: "0",
     height: "100%",
     width: "100%",
-    background: "rgba(0,0,0,.4)",
-    color: "white",
+    paddingLeft: "1vw",
+    paddingRight: "1vw",
+    paddingBottom: "8vh",
+    background: "rgba(255,255,255,.8)",
+    color: "black",
     display: "flex",
     flexDirection: "column",
-    alignItems: "center",
-    justifyContent: "center",
+    alignItems: "flex-start",
+    justifyContent: "flex-end",
     opacity: "0",
     transition: "opacity 0.5s",
         "&:hover": {
             opacity: "1",
         },
   },
-
+  name: {
+    fontSize: "calc(16px + .7vw)",
+      fontFamily: "public-sans, sans-serif",
+      marginBottom: "1vh",
+      fontWeight: "500",
+      textAlign: "left",
+  },
   description: {
-      fontSize: "5vw",
+    fontSize: "calc(10px + .4vw)",
       display: "block",
       margin: "0",
+      fontFamily: "public-sans, sans-serif",
+      fontWeight: "350",
   }
 });
 
@@ -61,9 +73,10 @@ export default function ProjectCard(props) {
             alt="project" 
             className={classes.image}/>
         <div className={classes.overlay}>
-            <div className={classes.description}>
+            <div className={classes.name}>
                 {name}
-                <br/>
+            </div>
+            <div className={classes.description}>
                 {description}
             </div>
 
