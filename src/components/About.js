@@ -19,7 +19,6 @@ const useStyles = makeStyles((theme) => ({
         margin: "12vh",
         alignItems: "center",
         justifyContent: "center",
-        
     },
     about: {
         width: "70vw",
@@ -39,21 +38,17 @@ const useStyles = makeStyles((theme) => ({
         flexDirection: "row",
         flexWrap: "wrap",
     },
-    headerContainer: {
-        width: "50%",
-        marginRight: "4vw",
-    },
     header: {
         fontSize: "calc(30px + 3vw)",
         fontWeight: "600",
         marginTop: "0",
         marginBottom: "0",
         marginRight: "0vw",
-
     },
     image: {
         width: "calc(70px + 30%)",
-        height: "calc(120px + 40%)",
+        //height: "calc(120px + 40%)",
+        height: "auto",
         borderRadius: ".4vh",
     },
     paragraph: {
