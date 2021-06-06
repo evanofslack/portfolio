@@ -5,7 +5,9 @@ import { ThemeProvider } from '@material-ui/core'
 import myTheme from './themes/myTheme'
 import Typed from "./Typed";
 import HoverShine from "./HoverShine";
+import FeaturedProjects from './FeaturedProjects'
 import Footer from "./Footer";
+
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -54,7 +56,7 @@ const useStyles = makeStyles((theme) => ({
     },
     projects: {
         width: "100%",
-        height: "1000px",
+        height: "20%",
         backgroundColor: "white",
     },
     "@keyframes fade": {
@@ -91,7 +93,8 @@ export default function Home() {
                         </div>
                     </div>
             </div>
-            <div className={classes.projects}>
+            <div>
+                <FeaturedProjects/>
             </div>
             <Footer/>
         </div>
