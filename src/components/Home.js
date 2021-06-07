@@ -19,11 +19,11 @@ const useStyles = makeStyles((theme) => ({
         background: "#0a1338",
     },
     name: {
-        marginTop: "4vw",
+        marginTop: "0vw",
         marginLeft: "8%",
         marginRight: "5%",
         marginBottom: "2vw",
-        fontSize: "8vw",
+        fontSize: "calc(24px + 5vw)",
         color: 'white',
         animation: "fade 1s",
     },
@@ -45,11 +45,13 @@ const useStyles = makeStyles((theme) => ({
         alignItems: "center",
         marginLeft: "8%",
         marginRight: "5%",
-        paddingBottom: "10vw",
+        paddingBottom: "10vh",
     },
     typing: {
-        color: "#00c297",
-        fontSize: "5.5vw",
+        //color: "#00c297",
+        color: "#40c9a9",
+        fontSize: "calc(16px + 2vw)",
+        fontWeight: "600",
         animation: "$fade ease 2s",
         wordWrap: "break-word",
         overflowWrap: "break-word",
@@ -85,7 +87,7 @@ export default function Home() {
                         </div>
                         <div className={classes.typeContainer}>
                             <div className={classes.typing}>
-                                {""} I &nbsp; 
+                                {""} Mechanical Engineer and &nbsp;
                             </div>
                             <div className={classes.typing}>
                                 <Typed/>
