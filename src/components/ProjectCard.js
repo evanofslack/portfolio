@@ -4,18 +4,21 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles({
   imageContainer: {
-    margin: "0",
+    margin: "2vw",
     padding: "0",
-    //maxWidth: "50%",
+    //width: "40vw",
+    //height: "auto",
+    //width: "40vw",
+    //height: "30vh",
     //minWidth: "350px",
-    width: "50vw",
-    height: "50vh",
-    //maxHeight: "350px",
+    //minHeight: "350px",
+    //maxWidth: "450px",
+    //maxHeight: "auto",
     overflow: "hidden",
     position: "relative",
-    //display: "flex",
-    //justifyContent: "space-around",
-    //alignItems: "center",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
   },
   image: {
     maxWidth: "100%",
@@ -30,23 +33,40 @@ const useStyles = makeStyles({
     left: "0",
     height: "100%",
     width: "100%",
-    background: "rgba(0,0,0,.4)",
-    color: "white",
+    paddingLeft: "1vw",
+    paddingRight: "1vw",
+    paddingBottom: "0vh",
+    //background: "rgba(10,19,56,.7)",
+    background: "rgba(255,255,255,.8)",
+    color: "black",
     display: "flex",
     flexDirection: "column",
-    alignItems: "center",
+    alignItems: "space-around",
     justifyContent: "center",
     opacity: "0",
-    transition: "opacity 0.5s",
+    transition: "opacity 0.3s",
         "&:hover": {
             opacity: "1",
         },
   },
-
+  name: {
+    color: "#222533",
+    fontSize: "calc(20px + .7vw)",
+    fontFamily: "public-sans, sans-serif",
+    //fontFamily: "arial",
+    marginBottom: "3vh",
+    fontWeight: "600",
+    textAlign: "center",
+  },
   description: {
-      fontSize: "5vw",
-      display: "block",
-      margin: "0",
+    color: "#222533",
+    fontSize: "calc(12px + .4vw)",
+    display: "block",
+    margin: "0",
+    fontFamily: "public-sans, sans-serif",
+    //fontFamily: "arial",
+    fontWeight: "350",
+    textAlign: "center",
   }
 });
 
@@ -61,12 +81,12 @@ export default function ProjectCard(props) {
             alt="project" 
             className={classes.image}/>
         <div className={classes.overlay}>
-            <div className={classes.description}>
+            <div className={classes.name}>
                 {name}
-                <br/>
+            </div>
+            <div className={classes.description}>
                 {description}
             </div>
-
         </div>
     </div>
   

@@ -11,12 +11,12 @@ export default function Typed() {
             <Typewriter
             options={{
                 strings: [
-                "design products",
-                "build robots",
-                "integrate electronics",
-                "create prototypes",
-                "write software",
-                "layout PCBs",
+                "Designer",
+                "Tinkerer",
+                "Coder",
+                "Developer",
+                "Contributor",
+                "Photographer",
                 ],
                 autoStart: true,
                 loop: true,
@@ -27,3 +27,15 @@ export default function Typed() {
     </ThemeProvider>
   );
 }
+
+
+/*
+
+"design products",
+"build robots",
+"integrate electronics",
+"create prototypes",
+"write software",
+"layout PCBs",              
+
+*/

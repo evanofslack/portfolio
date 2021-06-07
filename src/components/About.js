@@ -37,6 +37,7 @@ const useStyles = makeStyles((theme) => ({
         alignItems: "center",
         flexDirection: "row",
         flexWrap: "wrap",
+        marginBottom: "1vw",
     },
     header: {
         fontSize: "calc(30px + 3vw)",
@@ -44,6 +45,7 @@ const useStyles = makeStyles((theme) => ({
         marginTop: "0",
         marginBottom: "0",
         marginRight: "0vw",
+        fontFamily: "public-sans, sans-serif",
     },
     image: {
         width: "calc(70px + 30%)",
@@ -52,9 +54,11 @@ const useStyles = makeStyles((theme) => ({
         borderRadius: ".4vh",
     },
     paragraph: {
-        fontSize: "calc(10px + 1vw)",
+        fontSize: "calc(10px + .6vw)",
+        fontWeight: "340",
         lineHeight: "1.6em",
         marginBottom: "0",
+        fontFamily: "public-sans, sans-serif",
     },
     email: {
         title:"Send me an email",
