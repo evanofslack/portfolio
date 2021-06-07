@@ -20,12 +20,12 @@ const useStyles = makeStyles((theme) => ({
     color: "white",
     margin: "2vh",
     "&:hover": {
-      color: "#00c297",
+      color: "#40c9a9",
       textDecoration: "underline",
       textDecorationThickness: ".3vh",
     },
     "&.active": {
-      color:'#ede477',
+      color:'#40c9a9',
     },
   },
   container: {
