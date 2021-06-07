@@ -4,18 +4,20 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles({
   imageContainer: {
-    margin: "1vw",
+    margin: "2vw",
     padding: "0",
-    width: "40vw",
-    height: "30vh",
-    minWidth: "350px",
-    minHeight: "350px",
-    maxWidth: "450px",
-    maxHeight: "auto",
+    //width: "40vw",
+    //height: "auto",
+    //width: "40vw",
+    //height: "30vh",
+    //minWidth: "350px",
+    //minHeight: "350px",
+    //maxWidth: "450px",
+    //maxHeight: "auto",
     overflow: "hidden",
     position: "relative",
     display: "flex",
-    justifyContent: "space-around",
+    justifyContent: "center",
     alignItems: "center",
   },
   image: {
@@ -33,32 +35,38 @@ const useStyles = makeStyles({
     width: "100%",
     paddingLeft: "1vw",
     paddingRight: "1vw",
-    paddingBottom: "8vh",
+    paddingBottom: "0vh",
+    //background: "rgba(10,19,56,.7)",
     background: "rgba(255,255,255,.8)",
     color: "black",
     display: "flex",
     flexDirection: "column",
-    alignItems: "flex-start",
-    justifyContent: "flex-end",
+    alignItems: "space-around",
+    justifyContent: "center",
     opacity: "0",
-    transition: "opacity 0.5s",
+    transition: "opacity 0.3s",
         "&:hover": {
             opacity: "1",
         },
   },
   name: {
-    fontSize: "calc(16px + .7vw)",
-      fontFamily: "public-sans, sans-serif",
-      marginBottom: "1vh",
-      fontWeight: "500",
-      textAlign: "left",
+    color: "#222533",
+    fontSize: "calc(20px + .7vw)",
+    fontFamily: "public-sans, sans-serif",
+    //fontFamily: "arial",
+    marginBottom: "3vh",
+    fontWeight: "600",
+    textAlign: "center",
   },
   description: {
-    fontSize: "calc(10px + .4vw)",
-      display: "block",
-      margin: "0",
-      fontFamily: "public-sans, sans-serif",
-      fontWeight: "350",
+    color: "#222533",
+    fontSize: "calc(12px + .4vw)",
+    display: "block",
+    margin: "0",
+    fontFamily: "public-sans, sans-serif",
+    //fontFamily: "arial",
+    fontWeight: "350",
+    textAlign: "center",
   }
 });
 
@@ -79,7 +87,6 @@ export default function ProjectCard(props) {
             <div className={classes.description}>
                 {description}
             </div>
-
         </div>
     </div>
   

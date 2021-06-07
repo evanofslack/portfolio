@@ -3,6 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import { ThemeProvider } from '@material-ui/core'
 import myTheme from './themes/myTheme'
 import ProjectCard from './ProjectCard';
+import Grid from '@material-ui/core/Grid';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -11,19 +12,26 @@ const useStyles = makeStyles((theme) => ({
         padding: "0vw",
     },
     title: {
-        padding: "2vw",
-        fontSize: "calc(24px + 1.2vw)",
-        fontWeight: "600",
+        paddingTop: "calc(50px + 5vh)",
+        fontSize: "calc(26px + 1.6vw)",
+        color: "#0a1338",
+        fontWeight: "500",
         textAlign: "center",
         fontFamily: "public-sans, sans-serif",
+        
     },
     container: {
+        //flexGrow: "1",
         display: "flex",
-        justifyContent: "center",
         alignItems: "center",
-        flexDirection: "row",
-        flexWrap: "wrap",
-
+        justifyContent: "center",
+        paddingRight: "2vw",
+        paddingLeft: "2vw",
+        paddingBottom: "2vw",
+    },
+    test: {
+        backgroundColor: "black",
+        margin: "20px",
     },
 })
 )
@@ -33,12 +41,23 @@ export default function FeaturedProjects() {
   return (
       <div className={classes.root}>
           <div className={classes.title}>
-            Featured Projects
+            [ Featured Projects ]
           </div>
           <div className={classes.container}>
-            <ProjectCard project="macropad" name="MacroPad" description="Custom PCB, electronics housing, and software integration"/>
-            <ProjectCard project="toothbrush" name="Toothbrush Tester " description="Lifetime simulation device designed for the Tufts Dental School"/>
-            <ProjectCard project="splitflap" name="Splitflap Display" description="Designed improved housing for opensource project"/>
+              <Grid container justify="center" alignItems="center" spacing={0}>
+                  <Grid item xs={12} sm={6} justify="center" alignItems="center">
+                    <ProjectCard project="toothbrush" name="Toothbrush Tester" description="Brushing simulation device designed for Tufts Dental School"/>
+                  </Grid>
+                  <Grid item xs={12} sm={6} justify="center" alignItems="center">
+                    <ProjectCard project="macropad" name="MacroPad" description="Custom PCB, 3D-printed enclosure, and software integration"/>
+                  </Grid>
+                  <Grid item xs={12} sm={6} justify="center" alignItems="center">
+                      <ProjectCard project="splitflap" name="Splitflap Display" description="Acrylic enclosure for opensource project"/>
+                  </Grid>
+                  <Grid item xs={12} sm={6} justify="center" alignItems="center">
+                      <ProjectCard project="macropad" name="Splitflap Display" description="Acrylic enclosure for opensource project"/>
+                  </Grid>
+              </Grid>
           </div>
       </div>
       
