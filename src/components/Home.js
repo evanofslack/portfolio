@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
         overflow: "auto",
     },
     container: {
-        background: "#0a1338",
+        background: "#0a1338", // Primary Navy
     },
     name: {
         marginTop: "0vw",
@@ -25,10 +25,11 @@ const useStyles = makeStyles((theme) => ({
         marginBottom: "2vw",
         fontSize: "calc(24px + 5vw)",
         color: 'white',
-        animation: "fade 1s",
+        transform: "translateY(0)",
+        animation: "$fade ease 1.5s",
     },
     fade: {
-        animation: "$fade ease 1s",
+        //animation: "$fade ease 1.5s",
     },
     gradient: {
         "&:hover": {
@@ -48,13 +49,13 @@ const useStyles = makeStyles((theme) => ({
         paddingBottom: "10vh",
     },
     typing: {
-        //color: "#00c297",
-        color: "#40c9a9",
+        color: "#40c9a9", // Secondary Turquoise
         fontSize: "calc(16px + 2vw)",
         fontWeight: "600",
-        animation: "$fade ease 2s",
+        //animation: "$fade ease 3s",
         wordWrap: "break-word",
         overflowWrap: "break-word",
+        animation: "$fadeDelay ease 2s",
     },
     projects: {
         width: "100%",
@@ -64,11 +65,27 @@ const useStyles = makeStyles((theme) => ({
     "@keyframes fade": {
         "0%": {
             opacity: "0",
+            transform: "translateY(6%)",
         },
         "100%": {
             opacity: "1",
+            transform: "translateY(0)",
         },
     },    
+    "@keyframes fadeDelay": {
+        "0%": {
+            opacity: "0",
+            transform: "translateY(6%)",
+        },
+        "50%": {
+            opacity: "0",
+            transform: "translateY(6%)",
+        },
+        "100%": {
+            opacity: "1",
+            transform: "translateY(0)",
+        },
+    }, 
 })
 )
 export default function Home() {
