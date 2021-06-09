@@ -4,7 +4,7 @@ import Navbar from "./Navbar";
 import { ThemeProvider } from '@material-ui/core'
 import myTheme from './themes/myTheme'
 import Typed from "./Typed";
-import HoverShine from "./HoverShine";
+//import HoverShine from "./HoverShine";
 import FeaturedProjects from './FeaturedProjects'
 import Footer from "./Footer";
 
@@ -97,10 +97,7 @@ export default function Home() {
                 <Navbar/>
                     <div className={classes.fade}>
                         <div className={classes.name}>
-                            Hi! I'm 
-                            <HoverShine>
-                                &nbsp; Evan
-                            </HoverShine>
+                            Hi! I'm Evan
                         </div>
                         <div className={classes.typeContainer}>
                             <div className={classes.typing}>
