@@ -1,4 +1,4 @@
-const particleConfig = {
+const ParticleConfig = {
   "particles": {
     "number": {
       "value": 45,
@@ -106,8 +106,8 @@ const particleConfig = {
       }
     }
   },
-  "retina_detect": false
+  "retina_detect": true
   
 }
 
-export default particleConfig;
+export default ParticleConfig;
