@@ -36,7 +36,6 @@ const useStyles = makeStyles({
     paddingLeft: "1vw",
     paddingRight: "1vw",
     paddingBottom: "0vh",
-    //background: "rgba(10,19,56,.7)",
     background: "rgba(255,255,255,.8)",
     color: "black",
     display: "flex",
@@ -44,30 +43,38 @@ const useStyles = makeStyles({
     alignItems: "space-around",
     justifyContent: "center",
     opacity: "0",
-    transition: "opacity 0.3s",
+    transition: "ease 0.5s",
         "&:hover": {
             opacity: "1",
-        },
+            "& $name": {
+              transform: "translateY(0)",
+            },
+            "& $description": {
+              transform: "translateY(0)",
+            },
+        }, 
   },
   name: {
-    color: "#222533",
-    fontSize: "calc(20px + .7vw)",
+    color: "#3f4047",
+    fontSize: "calc(18px + .6vw)",
     fontFamily: "public-sans, sans-serif",
-    //fontFamily: "arial",
     marginBottom: "3vh",
     fontWeight: "600",
     textAlign: "center",
+    transform: "translateY(25px)",
+    transition: "transform 0.5s",
   },
   description: {
-    color: "#222533",
+    color: "#3f4047",
     fontSize: "calc(12px + .4vw)",
     display: "block",
     margin: "0",
     fontFamily: "public-sans, sans-serif",
-    //fontFamily: "arial",
     fontWeight: "350",
     textAlign: "center",
-  }
+    transform: "translateY(25px)",
+    transition: "transform 0.5s",
+  },
 });
 
 export default function ProjectCard(props) {
