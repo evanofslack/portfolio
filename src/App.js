@@ -8,6 +8,10 @@ import {
 import Home from "./components/Home";
 import About from "./components/About";
 import Projects from "./components/Projects";
+import Spotify from "./components/projects/Spotify";
+import Toothbrush from "./components/projects/Toothbrush";
+import Macropad from "./components/projects/Macropad";
+import Splitflap from "./components/projects/Splitflap";
 import { ThemeProvider } from '@material-ui/core'
 import myTheme from './components/themes/myTheme'
 import "./App.css";
@@ -22,6 +26,10 @@ function App() {
           <Route exact path="/" component={Home} />
           <Route exact path="/about" component={About} />
           <Route exact path="/projects" component={Projects} />
+          <Route exact path="/projects/spotify" component={Spotify} />
+          <Route exact path="/projects/toothbrush" component={Toothbrush} />
+          <Route exact path="/projects/macropad" component={Macropad} />
+          <Route exact path="/projects/splitflap" component={Splitflap} />
         </Switch>
       </Router>
     </ThemeProvider>

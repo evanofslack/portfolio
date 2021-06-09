@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import { makeStyles } from '@material-ui/core/styles';
 
 
@@ -83,18 +84,20 @@ export default function ProjectCard(props) {
 
   return (
     <div className={classes.imageContainer}>
+      <Link to={`projects/${project}`}>
         <img 
-            src={`static/projects/${project}/cover.png`}
-            alt="project" 
-            className={classes.image}/>
-        <div className={classes.overlay}>
-            <div className={classes.name}>
-                {name}
-            </div>
-            <div className={classes.description}>
-                {description}
-            </div>
-        </div>
+              src={`static/projects/${project}/cover.png`}
+              alt="project" 
+              className={classes.image}/>
+          <div className={classes.overlay}>
+              <div className={classes.name}>
+                  {name}
+              </div>
+              <div className={classes.description}>
+                  {description}
+              </div>
+          </div>
+      </Link> 
     </div>
   
   );

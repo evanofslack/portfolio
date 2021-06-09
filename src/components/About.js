@@ -55,7 +55,7 @@ const useStyles = makeStyles((theme) => ({
         borderRadius: ".4vh",
     },
     paragraph: {
-        fontSize: "calc(10px + .6vw)",
+        fontSize: "calc(12px + .5vw)",
         fontWeight: "340",
         lineHeight: "1.6em",
         marginBottom: "0",
