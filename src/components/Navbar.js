@@ -63,18 +63,18 @@ export default function Navbar() {
                         disableRipple
                         className={classes.menu}
                         component={NavLink}
-                        to="/about" exact
+                        to="/projects" exact
                     >
-                        About
+                        Projects
                     </Button>
 
                     <Button
                         disableRipple
                         className={classes.menu}
                         component={NavLink}
-                        to="/Contact" exact
+                        to="/about" exact
                     >
-                        Contact
+                        About
                     </Button>
                     
                 </div>

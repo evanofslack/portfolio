@@ -5,6 +5,7 @@ import { ThemeProvider } from '@material-ui/core';
 import myTheme from './themes/myTheme';
 import Footer from "./Footer";
 import ParticleBackground from "./ParticleBackground";
+import Email from "./Email";
 
 const useStyles = makeStyles((theme) => ({
     
@@ -37,7 +38,7 @@ const useStyles = makeStyles((theme) => ({
         alignItems: "center",
         flexDirection: "row",
         flexWrap: "wrap",
-        marginBottom: "1vw",
+        paddingBottom: "1.8vh",
     },
     header: {
         fontSize: "calc(30px + 3vw)",
@@ -96,6 +97,7 @@ export default function About() {
                         If you have any questions or inquiries feel free to &nbsp;
                         <a className={classes.email} href="mailto:evan.slack@outlook.com">reach out to me!</a>
                     </p>
+                    <Email/>
                 </div>
             </div>
             <Footer/>

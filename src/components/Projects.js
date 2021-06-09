@@ -3,8 +3,6 @@ import { makeStyles } from "@material-ui/core/styles";
 import Navbar from "./Navbar";
 import { ThemeProvider } from '@material-ui/core'
 import myTheme from './themes/myTheme'
-import Typed from "./Typed";
-import HoverShine from "./HoverShine";
 import FeaturedProjects from './FeaturedProjects'
 import Footer from "./Footer";
 
@@ -95,22 +93,6 @@ export default function Home() {
         <div className={classes.root}>
             <div className={classes.container}>
                 <Navbar/>
-                    <div className={classes.fade}>
-                        <div className={classes.name}>
-                            Hi! I'm 
-                            <HoverShine>
-                                &nbsp; Evan
-                            </HoverShine>
-                        </div>
-                        <div className={classes.typeContainer}>
-                            <div className={classes.typing}>
-                                {""} Mechanical Engineer and &nbsp;
-                            </div>
-                            <div className={classes.typing}>
-                                <Typed/>
-                            </div>
-                        </div>
-                    </div>
             </div>
             <div>
                 <FeaturedProjects/>

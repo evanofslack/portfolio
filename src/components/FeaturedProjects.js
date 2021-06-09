@@ -1,7 +1,5 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { ThemeProvider } from '@material-ui/core'
-import myTheme from './themes/myTheme'
 import ProjectCard from './ProjectCard';
 import Grid from '@material-ui/core/Grid';
 
@@ -14,8 +12,9 @@ const useStyles = makeStyles((theme) => ({
     title: {
         paddingTop: "calc(50px + 5vh)",
         fontSize: "calc(26px + 1.6vw)",
-        color: "#0a1338",
-        fontWeight: "500",
+        //color: "#0a1338",
+        color: "#3f4047",
+        fontWeight: "600",
         textAlign: "center",
         fontFamily: "public-sans, sans-serif",
         
@@ -29,10 +28,6 @@ const useStyles = makeStyles((theme) => ({
         paddingLeft: "2vw",
         paddingBottom: "2vw",
     },
-    test: {
-        backgroundColor: "black",
-        margin: "20px",
-    },
 })
 )
 
@@ -41,7 +36,7 @@ export default function FeaturedProjects() {
   return (
       <div className={classes.root}>
           <div className={classes.title}>
-            [ Featured Projects ]
+            Featured Projects:
           </div>
           <div className={classes.container}>
               <Grid container justify="center" alignItems="center" spacing={0}>
@@ -55,7 +50,7 @@ export default function FeaturedProjects() {
                       <ProjectCard project="splitflap" name="Splitflap Display" description="Acrylic enclosure for opensource project"/>
                   </Grid>
                   <Grid item xs={12} sm={6} justify="center" alignItems="center">
-                      <ProjectCard project="macropad" name="Splitflap Display" description="Acrylic enclosure for opensource project"/>
+                      <ProjectCard project="spotify" name="e-Paper Spotify Clock" description="E-Ink screen that displays time, weather, and what I'm listening to on Spotify"/>
                   </Grid>
               </Grid>
           </div>
