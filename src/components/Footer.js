@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
   button: {
     fontSize: '10vh',
     color: "white",
-    margin: "2vh",
+    margin: ".6vh 2vh",
     "&:hover": {
       color: "#40c9a9",
       textDecoration: "underline",
