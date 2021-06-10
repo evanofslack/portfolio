@@ -5,7 +5,7 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles({
   imageContainer: {
-    margin: "2vw",
+    margin: "5vw",
     padding: "0",
     //width: "40vw",
     //height: "auto",

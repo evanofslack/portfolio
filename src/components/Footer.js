@@ -13,12 +13,12 @@ const useStyles = makeStyles((theme) => ({
     top: "0",
     zIndex: "100",
     background: "#0a1338",
-    paddingBottom: "40px",
+    paddingBottom: "10px",
 },
   button: {
     fontSize: '10vh',
     color: "white",
-    margin: "2vh",
+    margin: ".6vh 2vh",
     "&:hover": {
       color: "#40c9a9",
       textDecoration: "underline",
@@ -40,6 +40,7 @@ const useStyles = makeStyles((theme) => ({
   },
   copyright: {
     color: "white",
+    fontSize: ".8rem",
   }
 }));
 
