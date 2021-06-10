@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
     top: "0",
     zIndex: "100",
     background: "#0a1338",
-    paddingBottom: "40px",
+    paddingBottom: "10px",
 },
   button: {
     fontSize: '10vh',
@@ -40,6 +40,7 @@ const useStyles = makeStyles((theme) => ({
   },
   copyright: {
     color: "white",
+    fontSize: ".8rem",
   }
 }));
 

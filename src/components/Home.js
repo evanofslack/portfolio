@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
         overflow: "auto",
     },
     container: {
-        background: "#0a1338", // Primary Navy
+        background: "#0a1338",                  // Primary Navy
     },
     name: {
         marginTop: "0vw",
@@ -26,10 +26,10 @@ const useStyles = makeStyles((theme) => ({
         fontSize: "calc(24px + 5vw)",
         color: 'white',
         transform: "translateY(0)",
-        animation: "$fade ease 1.5s",
+        //animation: "$fade linear 1s",         // ANIMATION
     },
     fade: {
-        //animation: "$fade ease 1.5s",
+        //animation: "$fade linear 1s",          // ANIMATION
     },
     gradient: {
         "&:hover": {
@@ -46,30 +46,32 @@ const useStyles = makeStyles((theme) => ({
         alignItems: "center",
         marginLeft: "8%",
         marginRight: "5%",
-        paddingBottom: "10vh",
+        //paddingBottom: "8vh",
+        paddingBottom: "5vh"
     },
-    typing: {
-        color: "#40c9a9", // Secondary Turquoise
+    typing: {  
+        color: "#40c9a9",                     // Secondary Turquoise
         fontSize: "calc(16px + 2vw)",
         fontWeight: "600",
-        //animation: "$fade ease 3s",
         wordWrap: "break-word",
         overflowWrap: "break-word",
-        animation: "$fadeDelay ease 2s",
+        //animation: "$fade linear 1s",     // ANIMATION
     },
-    projects: {
-        width: "100%",
-        height: "20%",
-        backgroundColor: "white",
+    projectCards: {
+        //animation: "$fade linear 1s",      // ANIMATION
     },
     "@keyframes fade": {
         "0%": {
-            opacity: "0",
-            transform: "translateY(6%)",
+            opacity: ".7",
+            transform: "translateY(2%)",
+        },
+        "50%": {
+            opacity: ".8",
+            transform: "translateY(1%)",
         },
         "100%": {
             opacity: "1",
-            transform: "translateY(0)",
+            //transform: "translateY(0)",
         },
     },    
     "@keyframes fadeDelay": {
@@ -81,11 +83,15 @@ const useStyles = makeStyles((theme) => ({
             opacity: "0",
             transform: "translateY(6%)",
         },
+        "75%": {
+            opacity: "0.8",
+            transform: "translateY(0)",
+        },
         "100%": {
             opacity: "1",
             transform: "translateY(0)",
         },
-    }, 
+    },
 })
 )
 export default function Home() {
@@ -109,7 +115,7 @@ export default function Home() {
                         </div>
                     </div>
             </div>
-            <div>
+            <div className={classes.projectCards}>
                 <FeaturedProjects/>
             </div>
             <Footer/>

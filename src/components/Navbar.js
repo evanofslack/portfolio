@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
       zIndex: "1",
       //background: "#02012e",
       background: "#0a1338",
-      padding: "2vw",
+      padding: ".5vw 2vw",
   },
   menu: {
       fontFamily: 'karla',

@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
     container: {
         display: "flex",
         flexDirection: "column",
-        margin: "12vh",
+        margin: "8vh 12vh",
         alignItems: "center",
         justifyContent: "center",
     },
@@ -81,6 +81,7 @@ export default function About() {
                         </h1>
                         <img 
                             src="/static/headshot.jpeg" 
+                            //src="/static/slackSTL.png" 
                             alt="headshot" 
                             className={classes.image}/>
                     </div>
