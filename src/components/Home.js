@@ -9,6 +9,7 @@ import FeaturedProjects from './FeaturedProjects'
 import Footer from "./Footer";
 
 
+
 const useStyles = makeStyles((theme) => ({
     root: {
         height: "100vh",
@@ -19,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
         background: "#0a1338",                  // Primary Navy
     },
     name: {
-        marginTop: "0vw",
+        marginTop: "2vw",
         marginLeft: "8%",
         marginRight: "5%",
         marginBottom: "2vw",
@@ -51,12 +52,13 @@ const useStyles = makeStyles((theme) => ({
     },
     typing: {  
         color: "#40c9a9",                     // Secondary Turquoise
-        fontSize: "calc(16px + 2vw)",
+        fontSize: "calc(9px + 2vw)",
         fontWeight: "600",
         wordWrap: "break-word",
         overflowWrap: "break-word",
         //animation: "$fade linear 1s",     // ANIMATION
     },
+
     projectCards: {
         //animation: "$fade linear 1s",      // ANIMATION
     },
@@ -107,7 +109,10 @@ export default function Home() {
                         </div>
                         <div className={classes.typeContainer}>
                             <div className={classes.typing}>
-                                {""} Mechanical Engineer and &nbsp;
+                                Mechanical Engineer &nbsp;
+                            </div>
+                            <div className={classes.typing}>
+                                and &nbsp;
                             </div>
                             <div className={classes.typing}>
                                 <Typed/>
