@@ -76,6 +76,15 @@ export default function Navbar() {
                     >
                         About
                     </Button>
+
+                    <Button
+                        disableRipple
+                        className={classes.menu}
+                        component={NavLink}
+                        to="/photography" exact
+                    >
+                        Photography
+                    </Button>
                     
                 </div>
             </Toolbar>
