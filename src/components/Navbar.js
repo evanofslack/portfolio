@@ -15,14 +15,14 @@ const useStyles = makeStyles((theme) => ({
       zIndex: "1",
       //background: "#02012e",
       background: "#0a1338",
-      padding: ".5vw 2vw",
+      padding: "2vw",
   },
   menu: {
       fontFamily: 'karla',
-      fontSize: "calc(10px + 1vw)",
+      fontSize: "calc(11px + .5vw)",
       //fontSize: '2.5vw',
       color: "white",
-      margin: "1.6vw",
+      margin: "1vw",
       "&:hover": {
         color: "#ede477",
         textDecoration: "underline",
@@ -34,6 +34,8 @@ const useStyles = makeStyles((theme) => ({
   },
   container: {
       display: "flex",
+      flexDirection: "row",
+      justifyContent: "flex-end",
   },
 }));
 
@@ -49,7 +51,6 @@ export default function Navbar() {
         <div className={classes.root}>
             <Toolbar>
                 <div className={classes.container}>
-
                     <Button
                         disableRipple
                         className={classes.menu}
