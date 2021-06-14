@@ -8,6 +8,7 @@ import {
 import Home from "./components/Home";
 import About from "./components/About";
 import Projects from "./components/Projects";
+import Photography from "./components/Photography";
 import Spotify from "./components/projects/Spotify";
 import Toothbrush from "./components/projects/Toothbrush";
 import Macropad from "./components/projects/Macropad";
@@ -26,6 +27,7 @@ function App() {
           <Route exact path="/" component={Home} />
           <Route exact path="/about" component={About} />
           <Route exact path="/projects" component={Projects} />
+          <Route exact path="/photography" component={Photography} />
           <Route exact path="/projects/spotify" component={Spotify} />
           <Route exact path="/projects/toothbrush" component={Toothbrush} />
           <Route exact path="/projects/macropad" component={Macropad} />
