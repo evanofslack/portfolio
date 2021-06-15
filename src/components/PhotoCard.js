@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from "react-router-dom";
 import { makeStyles } from '@material-ui/core/styles';
 
 
@@ -66,7 +65,7 @@ export default function PhotoCard(props) {
     <div className={classes.imageContainer}>
         <img 
               src={`static/photos/${photoNumber}.jpeg`}
-              alt="photo" 
+              alt="analog" 
               className={classes.image}/>
           <div className={classes.overlay}>
               <div className={classes.name}>

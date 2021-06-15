@@ -1,10 +1,10 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
+import MobileNavbar from "./MobileNavbar";
 import Navbar from "./Navbar";
 import { ThemeProvider } from '@material-ui/core'
 import myTheme from './themes/myTheme'
 import Typed from "./Typed";
-//import HoverShine from "./HoverShine";
 import FeaturedProjects from './FeaturedProjects'
 import Footer from "./Footer";
 
@@ -62,6 +62,16 @@ const useStyles = makeStyles((theme) => ({
     projectCards: {
         //animation: "$fade linear 1s",      // ANIMATION
     },
+    displayMobile: {
+        [theme.breakpoints.up('sm')]: {
+          display: "none",
+        },
+      },
+      displayWeb: {
+        [theme.breakpoints.down('xs')]: {
+          display: "none",
+        },
+      },
     "@keyframes fade": {
         "0%": {
             opacity: ".7",
@@ -102,23 +112,28 @@ export default function Home() {
     <ThemeProvider theme={myTheme}> 
         <div className={classes.root}>
             <div className={classes.container}>
-                <Navbar/>
-                    <div className={classes.fade}>
-                        <div className={classes.name}>
-                            Hi! I'm Evan
+                <div className={classes.displayMobile}>
+                    <MobileNavbar/>
+                </div>
+                <div className={classes.displayWeb}>
+                    <Navbar/>
+                </div>
+                        <div className={classes.fade}>
+                            <div className={classes.name}>
+                                Hi! I'm Evan
+                            </div>
+                            <div className={classes.typeContainer}>
+                                <div className={classes.typing}>
+                                    Mechanical Engineer &nbsp;
+                                </div>
+                                <div className={classes.typing}>
+                                    and &nbsp;
+                                </div>
+                                <div className={classes.typing}>
+                                    <Typed/>
+                                </div>
+                            </div>
                         </div>
-                        <div className={classes.typeContainer}>
-                            <div className={classes.typing}>
-                                Mechanical Engineer &nbsp;
-                            </div>
-                            <div className={classes.typing}>
-                                and &nbsp;
-                            </div>
-                            <div className={classes.typing}>
-                                <Typed/>
-                            </div>
-                        </div>
-                    </div>
             </div>
             <div className={classes.projectCards}>
                 <FeaturedProjects/>
