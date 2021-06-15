@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
   },
   menu: {
       fontFamily: 'karla',
-      fontSize: "calc(11px + .5vw)",
+      fontSize: "calc(11px + .65vw)",
       //fontSize: '2.5vw',
       color: "white",
       margin: "1vw",
