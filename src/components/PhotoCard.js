@@ -47,10 +47,10 @@ const useStyles = makeStyles({
   },
   name: {
     color: "white",
-    fontSize: "calc(18px + .6vw)",
+    fontSize: "calc(14px + .4vw)",
     fontFamily: "public-sans, sans-serif",
-    marginBottom: "3vh",
-    fontWeight: "600",
+    marginBottom: "1.5vh",
+    fontWeight: "400",
     textAlign: "left",
     transform: "translateY(8px)",
     transition: "transform 0.5s",

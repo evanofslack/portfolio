@@ -18,8 +18,8 @@ const useStyles = makeStyles((theme) => ({
         background: "#0a1338", // Primary Navy
     },
     title: {
-        paddingTop: "calc(50px + 5vh)",
-        paddingBottom: "calc(50px + 5vh)",
+        paddingTop: "calc(40px + 3vh)",
+        marginBottom: "calc(40px + 3vh)",
         fontSize: "calc(26px + 1.6vw)",
         //color: "#0a1338",
         color: "#3f4047",
@@ -35,6 +35,7 @@ const useStyles = makeStyles((theme) => ({
         paddingRight: "2vw",
         paddingLeft: "2vw",
         paddingBottom: "2vw",
+        paddingTop: "6vh",
         backgroundColor: "white",
     }, 
 })
@@ -52,13 +53,13 @@ export default function Photography() {
                 <div className={classes.container}>
                     <Grid container justify="center" alignItems="center" spacing={0}>
                         <Grid item xs={12} sm={12} justify="center" alignItems="center">
-                            <PhotoCard photoNumber="1" name="Bondi Beach"/>
+                            <PhotoCard photoNumber="1" name="Bondi Skate Park"/>
                         </Grid>
                         <Grid item xs={12} sm={6} justify="center" alignItems="center">
                             <PhotoCard photoNumber="2" name="Bondi Beach"/>
                         </Grid>
                         <Grid item xs={12} sm={6} justify="center" alignItems="center">
-                            <PhotoCard photoNumber="3" name="Bondi Beach"/>
+                            <PhotoCard photoNumber="3" name="Bondi Icebergs"/>
                         </Grid>
                     </Grid>
                 </div>

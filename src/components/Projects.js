@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
         background: "#0a1338", // Primary Navy
     },
     title: {
-        paddingTop: "calc(50px + 5vh)",
+        paddingTop: "calc(40px + 3vh)",
         fontSize: "calc(26px + 1.6vw)",
         //color: "#0a1338",
         color: "#3f4047",
@@ -36,6 +36,11 @@ const useStyles = makeStyles((theme) => ({
         paddingBottom: "2vw",
         backgroundColor: "white",
     }, 
+    WIP: {
+        //marginTop: "4vh",
+        marginBottom: "4vh",
+        fontSize: "calc(16px + 1.4vw)",
+    }
 })
 )
 export default function Projects() {
@@ -64,7 +69,9 @@ export default function Projects() {
                         </Grid>
                     </Grid>
                 </div>
-                WIP - More to Come!
+                <div className={classes.WIP}>
+                    WIP - More to Come!
+                </div>
             </div>
             <Footer/>
         </div>

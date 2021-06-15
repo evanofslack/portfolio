@@ -10,9 +10,8 @@ const useStyles = makeStyles((theme) => ({
         padding: "0vw",
     },
     title: {
-        paddingTop: "calc(50px + 5vh)",
+        paddingTop: "calc(40px + 3vh)",
         fontSize: "calc(26px + 1.6vw)",
-        //color: "#0a1338",
         color: "#3f4047",
         fontWeight: "600",
         textAlign: "center",
@@ -21,7 +20,6 @@ const useStyles = makeStyles((theme) => ({
         
     },
     container: {
-        //flexGrow: "1",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
@@ -59,5 +57,3 @@ export default function FeaturedProjects() {
       
   );
 }
-
-// <ProjectCard project="toothbrush" name="Toothbrush " description="Lifetime simulation device "/>
