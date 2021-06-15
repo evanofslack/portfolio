@@ -4,7 +4,7 @@ import Drawer from "@material-ui/core/Drawer";
 import IconButton from '@material-ui/core/IconButton';
 import Button from "@material-ui/core/Button";
 import { ThemeProvider } from '@material-ui/core'
-import myTheme from './themes/myTheme'
+import navTheme from './themes/navTheme'
 import MenuIcon from '@material-ui/icons/Menu';
 import { NavLink } from  "react-router-dom";
 import Toolbar from "@material-ui/core/Toolbar";
@@ -13,15 +13,17 @@ const useStyles = makeStyles((theme) => ({
   menuButton: {
     display: "flex",
     justifyContent: "flex-end",
+    //backgroundColor: "white",
   },
 
   menu: {
     fontFamily: 'karla',
     fontSize: "calc(16px + .5vw)",
     color:'#0a1338',
+    
     margin: "1vw",
     "&:hover": {
-      color: "#ede477",
+      backgroundColor: "white",
       textDecoration: "underline",
       textDecorationThickness: ".3vh",
     },
@@ -37,7 +39,6 @@ container: {
     justifyContent: "flex-end",
     margin: "4vh 1vh",
     zIndex: "1",
-    //background: "#02012e",
     background: "white",
 },
 }));
@@ -55,16 +56,15 @@ export default function MobileNavbar() {
   };
 
   return (
-    <ThemeProvider theme={myTheme}>
+    <ThemeProvider theme={navTheme}>
       <div className={classes.menuButton}>
           <IconButton
               onClick={handleDrawerOpen}
               
-              style={{ color: "white" }}
+              style={{ color: "white", backgroundColor: "#0a1338", borderRadius: "0 0 0 12px" }}
           >
               <MenuIcon fontSize = "large" />
           </IconButton>
-
           <Drawer
             anchor= "right"
             open={open}
@@ -73,7 +73,7 @@ export default function MobileNavbar() {
             <Toolbar >
                 <div className={classes.container}>
                     <Button
-                        disableRipple
+                        disableRipple 
                         className={classes.menu}
                         component={NavLink}
                         to="/" exact
@@ -82,7 +82,7 @@ export default function MobileNavbar() {
                     </Button>
 
                     <Button
-                        disableRipple
+                        disableRipple 
                         className={classes.menu}
                         component={NavLink}
                         to="/projects" exact
@@ -91,7 +91,7 @@ export default function MobileNavbar() {
                     </Button>
 
                     <Button
-                        disableRipple
+                        disableRipple 
                         className={classes.menu}
                         component={NavLink}
                         to="/about" exact
