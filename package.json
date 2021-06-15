@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@fontsource/barlow": "^4.4.5",
     "@material-ui/core": "^4.11.4",
     "@material-ui/icons": "^4.11.2",
     "@react-three/fiber": "^7.0.1",
@@ -25,6 +26,7 @@
     "three": "^0.110.0",
     "three-js": "^79.0.0",
     "typeface-actor": "^1.1.13",
+    "typeface-barlow": "^1.1.13",
     "typeface-karla": "^1.1.13",
     "typeface-mada": "^1.1.13",
     "typeface-noto-sans": "^1.1.13",

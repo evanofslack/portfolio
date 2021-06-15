@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
 
   menu: {
     fontFamily: 'karla',
-    fontSize: "calc(16px)",
+    fontSize: "calc(16px + .5vw)",
     color:'#0a1338',
     margin: "1vw",
     "&:hover": {

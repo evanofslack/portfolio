@@ -96,8 +96,8 @@ export default function About() {
                     </p>
                     <p className={classes.paragraph}>
                         This website showcases my selected work from internships, class projects and personal endeavors. 
-                        If you have any questions or inquiries feel free to &nbsp;
-                        <a className={classes.email} href="mailto:evan.slack@outlook.com">reach out to me!</a>
+                        If you have any questions or inquiries feel free to reach out to me: &nbsp;
+                        <a className={classes.email} href="mailto:evan.slack@outlook.com">evan.slack@outlook.com</a>
                     </p>
                     <Email/>
                 </div>
