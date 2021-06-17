@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
         color: "#3f4047",
         fontWeight: "600",
         textAlign: "center",
-        fontFamily: "public-sans, sans-serif",
+        fontFamily: "barlow",
         backgroundColor: "white",
     },
     container: {

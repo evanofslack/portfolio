@@ -2,10 +2,10 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Navbar from "./Navbar";
 import { ThemeProvider } from '@material-ui/core'
-import myTheme from './themes/myTheme'
 import PhotoCard from './PhotoCard';
 import Grid from '@material-ui/core/Grid';
 import Footer from "./Footer";
+import bodyTheme from './themes/bodyTheme'
 
 
 const useStyles = makeStyles((theme) => ({
@@ -25,15 +25,15 @@ const useStyles = makeStyles((theme) => ({
         color: "#3f4047",
         fontWeight: "600",
         textAlign: "center",
-        fontFamily: "public-sans, sans-serif",
+        fontFamily: "barlow",
         backgroundColor: "white",
     },
     container: {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        paddingRight: "2vw",
-        paddingLeft: "2vw",
+        paddingRight: "5vw",
+        paddingLeft: "5vw",
         paddingBottom: "2vw",
         paddingTop: "6vh",
         backgroundColor: "white",
@@ -43,7 +43,7 @@ const useStyles = makeStyles((theme) => ({
 export default function Photography() {
     const classes = useStyles();
   return (
-    <ThemeProvider theme={myTheme}> 
+    <ThemeProvider theme={bodyTheme}> 
         <div className={classes.root}>
             <div className={classes.navbar}>
                 <Navbar/>
@@ -53,13 +53,13 @@ export default function Photography() {
                 <div className={classes.container}>
                     <Grid container justify="center" alignItems="center" spacing={0}>
                         <Grid item xs={12} sm={12} justify="center" alignItems="center">
-                            <PhotoCard photoNumber="1" name="Bondi Skate Park"/>
+                            <PhotoCard photoNumber="1" name="Bondi Skate Club"/>
                         </Grid>
                         <Grid item xs={12} sm={6} justify="center" alignItems="center">
-                            <PhotoCard photoNumber="2" name="Bondi Beach"/>
+                            <PhotoCard photoNumber="2" name="Gem of the Ocean"/>
                         </Grid>
                         <Grid item xs={12} sm={6} justify="center" alignItems="center">
-                            <PhotoCard photoNumber="3" name="Bondi Icebergs"/>
+                            <PhotoCard photoNumber="3" name="The Icebergs"/>
                         </Grid>
                     </Grid>
                 </div>

@@ -2,7 +2,7 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Navbar from "./Navbar";
 import { ThemeProvider } from '@material-ui/core';
-import myTheme from './themes/myTheme';
+import bodyTheme from './themes/bodyTheme';
 import Footer from "./Footer";
 import ParticleBackground from "./ParticleBackground";
 import Email from "./Email";
@@ -47,7 +47,7 @@ const useStyles = makeStyles((theme) => ({
         marginTop: "0",
         marginBottom: "0",
         marginRight: "0vw",
-        fontFamily: "public-sans, sans-serif",
+        fontFamily: "barlow",
     },
     image: {
         width: "calc(70px + 30%)",
@@ -60,7 +60,7 @@ const useStyles = makeStyles((theme) => ({
         fontWeight: "340",
         lineHeight: "1.6em",
         marginBottom: "0",
-        fontFamily: "public-sans, sans-serif",
+        fontFamily: "barlow",
     },
     email: {
         title:"Send me an email",
@@ -71,7 +71,7 @@ const useStyles = makeStyles((theme) => ({
 export default function About() {
     const classes = useStyles();
   return (
-    <ThemeProvider theme={myTheme}> 
+    <ThemeProvider theme={bodyTheme}> 
         <div className={classes.root}>
             <Navbar/>
             <div className={classes.container}>
