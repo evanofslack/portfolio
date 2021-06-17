@@ -2,6 +2,8 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import ProjectCard from './ProjectCard';
 import Grid from '@material-ui/core/Grid';
+import bodyTheme from './themes/bodyTheme'
+import { ThemeProvider } from '@material-ui/core'
 
 
 const useStyles = makeStyles((theme) => ({
@@ -9,15 +11,25 @@ const useStyles = makeStyles((theme) => ({
         backgroundColor: "white",
         padding: "0vw",
     },
-    title: {
+    spacing: {
         paddingTop: "calc(40px + 3vh)",
         fontSize: "calc(26px + 1.6vw)",
         color: "#3f4047",
         fontWeight: "600",
         textAlign: "center",
         //fontFamily: "public-sans, sans-serif",
-        fontFamily: "barlow, , public-sans", 
+        fontFamily: "barlow", 
+        background: "#white",
         
+    },
+    title: {
+      //background: "#ededed",
+      borderRadius: "5px",
+      //margin: "1vh 30vw",
+      //boxShadow: "2px 2px 2px 0px #a3c9c5",
+      wordWrap: "normal",
+      overflowWrap: "normal",
+
     },
     container: {
         display: "flex",
@@ -33,9 +45,14 @@ const useStyles = makeStyles((theme) => ({
 export default function FeaturedProjects() {
     const classes = useStyles();
   return (
-      <div className={classes.root}>
-          <div className={classes.title}>
-            Featured Projects:
+    <ThemeProvider theme={bodyTheme}>
+        <div className={classes.root}>
+          <div className={classes.spacing}>
+
+          
+            <div className={classes.title}>
+              Featured Projects:
+            </div>
           </div>
           <div className={classes.container}>
               <Grid container justify="center" alignItems="center" spacing={0}>
@@ -54,6 +71,8 @@ export default function FeaturedProjects() {
               </Grid>
           </div>
       </div>
+    </ThemeProvider> 
+      
       
   );
 }

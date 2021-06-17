@@ -48,9 +48,9 @@ const useStyles = makeStyles({
   name: {
     color: "white",
     fontSize: "calc(14px + .4vw)",
-    fontFamily: "public-sans, sans-serif",
+    fontFamily: "barlow",
     marginBottom: "1.5vh",
-    fontWeight: "400",
+    fontWeight: "500",
     textAlign: "left",
     transform: "translateY(8px)",
     transition: "transform 0.5s",

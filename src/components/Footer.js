@@ -40,7 +40,7 @@ const useStyles = makeStyles((theme) => ({
   },
   copyright: {
     color: "white",
-    fontSize: ".8rem",
+    fontSize: "calc(9px + .3vw)",
   }
 }));
 
