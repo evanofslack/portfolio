@@ -27,7 +27,7 @@ const useStyles = makeStyles({
     paddingLeft: "1vw",
     paddingRight: "1vw",
     paddingBottom: "0vh",
-    background: "rgba(255,255,255,.8)",
+    background: "rgba(255,255,255,.88)",
     color: "black",
     display: "flex",
     flexDirection: "column",
@@ -52,7 +52,7 @@ const useStyles = makeStyles({
     marginBottom: "3vh",
     fontWeight: "500",
     textAlign: "center",
-    transform: "translateY(25px)",
+    transform: "translateY(10px)",
     transition: "transform 0.5s",
   },
   description: {
@@ -63,7 +63,7 @@ const useStyles = makeStyles({
     fontFamily: "barlow",
     fontWeight: "400",
     textAlign: "center",
-    transform: "translateY(25px)",
+    transform: "translateY(10px)",
     transition: "transform 0.5s",
   },
 });

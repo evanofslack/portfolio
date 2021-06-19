@@ -55,22 +55,40 @@ export default function Projects() {
                 Projects
                 <div className={classes.container}>
                     <Grid container justify="center" alignItems="center" spacing={0}>
-                        <Grid item xs={12} sm={6} justify="center" alignItems="center">
+                        <Grid item xs={12} sm={6} lg={4} justify="center" alignItems="center">
+                            <ProjectCard project="flowbench" name="FlowBench" description="Jig to quantify microfluidic inkflow"/>
+                        </Grid>
+                        <Grid item xs={12} sm={6} lg={4} justify="center" alignItems="center">
                             <ProjectCard project="toothbrush" name="Toothbrush Tester" description="Brushing simulation device designed for Tufts Dental School"/>
                         </Grid>
-                        <Grid item xs={12} sm={6} justify="center" alignItems="center">
+                        <Grid item xs={12} sm={6} lg={4} justify="center" alignItems="center">
+                            <ProjectCard project="writingrobot" name="Handwriting Robot" description="3-DOF robotic arm capable of writing characters"/>
+                        </Grid>
+                        <Grid item xs={12} sm={6} lg={4} justify="center" alignItems="center">
+                            <ProjectCard project="glaucoma" name="VisionAiry" description="Self-administered glaucoma monitoring device"/>
+                        </Grid>
+                        <Grid item xs={12} sm={6} lg={4} justify="center" alignItems="center">
                             <ProjectCard project="macropad" name="MacroPad" description="Custom PCB, 3D-printed enclosure, and software integration"/>
                         </Grid>
-                        <Grid item xs={12} sm={6} justify="center" alignItems="center">
+                        <Grid item xs={12} sm={6} lg={4} justify="center" alignItems="center">
+                            <ProjectCard project="lermon" name="Autonomous Biped" description="Obstacle detection and navigation"/>
+                        </Grid>
+                        <Grid item xs={12} sm={6} lg={4} ustify="center" alignItems="center">
                             <ProjectCard project="splitflap" name="Splitflap Display" description="Acrylic enclosure for opensource project"/>
                         </Grid>
-                        <Grid item xs={12} sm={6} justify="center" alignItems="center">
+                        <Grid item xs={12} sm={6} lg={4} justify="center" alignItems="center">
                             <ProjectCard project="spotify" name="e-Paper Spotify Clock" description="E-Ink screen that displays time, weather, and what I'm listening to on Spotify"/>
                         </Grid>
+                        <Grid item xs={12} sm={6} lg={4} justify="center" alignItems="center">
+                            <ProjectCard project="inchworm" name="CrawlerBot" description="The inchworm's robotic counterpart"/>
+                        </Grid>
+                        <Grid item xs={12} sm={6} lg={4} justify="center" alignItems="center">
+                            <ProjectCard project="inkdisplay" name="Display Frame" description="Modular and expandable frame for integration and testing"/>
+                        </Grid>
+                        <Grid item xs={12} sm={6} lg={4} justify="center" alignItems="center">
+                            <ProjectCard project="portfolio" name="Personal Website" description="Created with React.js and hosted with Netlify"/>
+                        </Grid>
                     </Grid>
-                </div>
-                <div className={classes.WIP}>
-                    WIP - More to Come!
                 </div>
             </div>
             <Footer/>

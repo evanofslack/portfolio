@@ -52,7 +52,7 @@ const useStyles = makeStyles({
     marginBottom: "1.5vh",
     fontWeight: "500",
     textAlign: "left",
-    transform: "translateY(8px)",
+    transform: "translateY(6px)",
     transition: "transform 0.5s",
   },
 });
