@@ -35,8 +35,8 @@ const useStyles = makeStyles((theme) => ({
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        paddingRight: "2vw",
-        paddingLeft: "2vw",
+        paddingRight: "5vw",
+        paddingLeft: "5vw",
         paddingBottom: "2vw",
     },
 })
