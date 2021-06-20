@@ -1,6 +1,6 @@
 # Personal Website
 
-#### React.js App - source for www.evanslackdesign.com
+## React.js App - source for www.evanslackdesign.com
 
 bootsrapped with [Create React App](https://github.com/facebook/create-react-app).
 
