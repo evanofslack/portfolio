@@ -31,7 +31,7 @@ const useStyles = makeStyles({
     color: "black",
     display: "flex",
     flexDirection: "column",
-    alignItems: "flex-start",
+    alignItems: "flex-end",
     justifyContent: "flex-end",
     opacity: "0",
     transition: "ease 0.5s",
@@ -40,19 +40,16 @@ const useStyles = makeStyles({
             "& $name": {
               transform: "translateY(0)",
             },
-            "& $description": {
-              transform: "translateY(0)",
-            },
         }, 
   },
   name: {
     color: "white",
-    fontSize: "calc(14px + .4vw)",
+    fontSize: "calc(12px + .3vw)",
     fontFamily: "barlow",
-    marginBottom: "1.5vh",
+    marginBottom: ".75vh",
     fontWeight: "500",
     textAlign: "left",
-    transform: "translateY(6px)",
+    transform: "translateY(5px)",
     transition: "transform 0.5s",
   },
 });
