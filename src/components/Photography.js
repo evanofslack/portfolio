@@ -93,12 +93,31 @@ export default function Photography() {
                         <Grid item xs={12} sm={4} justify="center" alignItems="center">
                             <PhotoCard photoNumber="9" name="Next-Gen"/>
                         </Grid>
+
                         <Grid item xs={12} sm={6} justify="center" alignItems="center">
-                            <PhotoCard photoNumber="11" name="Stacks"/>
+                            <PhotoCard photoNumber="11" name="Brooklyn Stacks"/>
                         </Grid>
                         <Grid item xs={12} sm={6} justify="center" alignItems="center">
-                            <PhotoCard photoNumber="12" name="Stripes"/>
+                            <PhotoCard photoNumber="12" name="Nations"/>
                         </Grid>
+
+                        <Grid item xs={12} sm={4} justify="center" alignItems="center">
+                            <PhotoCard photoNumber="15" name="Kitsilano"/>
+                        </Grid>
+                        <Grid item xs={12} sm={8} justify="center" alignItems="center">
+                            <PhotoCard photoNumber="13" name="Lion's Gate"/>
+                        </Grid>
+
+                        <Grid item xs={12} sm={4} justify="center" alignItems="center">
+                            <PhotoCard photoNumber="18" name="Koh Pha Ngan"/>
+                        </Grid>
+                        <Grid item xs={12} sm={4} justify="center" alignItems="center">
+                            <PhotoCard photoNumber="16" name="Bangkok"/>
+                        </Grid>
+                        <Grid item xs={12} sm={4} justify="center" alignItems="center">
+                            <PhotoCard photoNumber="17" name="Skytrain"/>
+                        </Grid>
+                      
 
                     </Grid>
                     
