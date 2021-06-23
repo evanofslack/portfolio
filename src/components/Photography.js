@@ -62,7 +62,7 @@ export default function Photography() {
                         <Grid item xs={12} sm={4}>
                             < Grid container direction="column" justify="center" alignItems="center" spacing ={0}>
                                 <Grid item xs={12} justify="center" alignItems="center">
-                                    <PhotoCard photoNumber="2" name="Gem of the Ocean"/>
+                                    <PhotoCard photoNumber="2" name="Gem of the Sea"/>
                                 </Grid>
                                 <Grid item xs={12}justify="center" alignItems="center">
                                     <PhotoCard photoNumber="3" name="The Icebergs"/>
@@ -77,11 +77,11 @@ export default function Photography() {
                             <PhotoCard photoNumber="6" name="Island Time"/>
                         </Grid>
                         <Grid item xs={12} sm={12} justify="center" alignItems="center">
-                            <PhotoCard photoNumber="4" name="Onward"/>
+                            <PhotoCard photoNumber="4" name="Homebound"/>
                         </Grid>
 
                         <Grid item xs={12} sm={4} justify="center" alignItems="center">
-                            <PhotoCard photoNumber="7" name="Singapore Skyline"/>
+                            <PhotoCard photoNumber="7" name="Mount Faber"/>
                         </Grid>
                         <Grid item xs={12} sm={8} justify="center" alignItems="center">
                             <PhotoCard photoNumber="8" name="Urban Foliage"/>

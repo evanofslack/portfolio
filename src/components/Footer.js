@@ -19,6 +19,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: '10vh',
     color: "white",
     margin: "1vh 2vh",
+    transition: "ease-in .12s",
     "&:hover": {
       color: "#40c9a9",
       textDecoration: "underline",

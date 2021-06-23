@@ -17,16 +17,13 @@ const useStyles = makeStyles((theme) => ({
         color: "#3f4047",
         fontWeight: "600",
         textAlign: "center",
-        //fontFamily: "public-sans, sans-serif",
         fontFamily: "barlow", 
         background: "#white",
         
     },
     title: {
-      //background: "#ededed",
+
       borderRadius: "5px",
-      //margin: "1vh 30vw",
-      //boxShadow: "2px 2px 2px 0px #a3c9c5",
       wordWrap: "normal",
       overflowWrap: "normal",
 
@@ -51,7 +48,7 @@ export default function FeaturedProjects() {
 
           
             <div className={classes.title}>
-              Featured Projects:
+              Featured
             </div>
           </div>
           <div className={classes.container}>

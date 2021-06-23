@@ -7,6 +7,9 @@ import myTheme from './themes/myTheme'
 import Typed from "./Typed";
 import FeaturedProjects from './FeaturedProjects'
 import Footer from "./Footer";
+import Button from '@material-ui/core/Button';
+import { NavLink } from  "react-router-dom";
+import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 
 
 
@@ -61,6 +64,27 @@ const useStyles = makeStyles((theme) => ({
 
     projectCards: {
         //animation: "$fade linear 1s",      // ANIMATION
+    },
+    seeAll: {
+        background: "white",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        fontSize: "calc(24px + 5vw)",
+        paddingBottom: "3vh",
+    },
+    projectButton: {
+        fontSize: "calc(14px + 1vw)",
+        textTransform: "capitalize",
+        borderColor: "#0a1338",
+        borderStyle: "solid",
+        borderRadius: "10px",
+        transition: "ease-in .15s",
+        "&:hover": {
+            background: "white",
+            color: "#40c9a9",
+            textDecorationThickness: ".3vh",
+          },
     },
     displayMobile: {
         [theme.breakpoints.up('sm')]: {
@@ -138,6 +162,12 @@ export default function Home() {
             <div className={classes.projectCards}>
                 <FeaturedProjects/>
             </div>
+            <div className={classes.seeAll}>
+                <Button className={classes.projectButton} component={NavLink} to="/projects" exact>
+                    All Projects
+                    <ChevronRightIcon/>
+                </Button>
+          </div> 
             <Footer/>
         </div>
     </ThemeProvider>
