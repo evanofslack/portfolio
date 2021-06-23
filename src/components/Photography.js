@@ -38,6 +38,9 @@ const useStyles = makeStyles((theme) => ({
         paddingTop: "6vh",
         backgroundColor: "white",
     }, 
+    photoGroup: {
+        marginBottom: "3vw",
+    },
 })
 )
 export default function Photography() {
@@ -50,18 +53,55 @@ export default function Photography() {
             </div>
             <div className={classes.title}>
                 Analog Captures
-                <div className={classes.container}>
-                    <Grid container justify="center" alignItems="center" spacing={0}>
-                        <Grid item xs={12} sm={12} justify="center" alignItems="center">
+                <div className={classes.container}> 
+
+                    <Grid container justify="center" alignItems="center" spacing={0}> 
+                        <Grid item xs={12} sm={8} justify="center" alignItems="center">
                             <PhotoCard photoNumber="1" name="Bondi Skate Club"/>
                         </Grid>
+                        <Grid item xs={12} sm={4}>
+                            < Grid container direction="column" justify="center" alignItems="center" spacing ={0}>
+                                <Grid item xs={12} justify="center" alignItems="center">
+                                    <PhotoCard photoNumber="2" name="Gem of the Ocean"/>
+                                </Grid>
+                                <Grid item xs={12}justify="center" alignItems="center">
+                                    <PhotoCard photoNumber="3" name="The Icebergs"/>
+                                </Grid>
+                            </Grid>
+                        </Grid>
+
                         <Grid item xs={12} sm={6} justify="center" alignItems="center">
-                            <PhotoCard photoNumber="2" name="Gem of the Ocean"/>
+                            <PhotoCard photoNumber="5" name="Captain's Quarters"/>
                         </Grid>
                         <Grid item xs={12} sm={6} justify="center" alignItems="center">
-                            <PhotoCard photoNumber="3" name="The Icebergs"/>
+                            <PhotoCard photoNumber="6" name="Island Time"/>
                         </Grid>
+                        <Grid item xs={12} sm={12} justify="center" alignItems="center">
+                            <PhotoCard photoNumber="4" name="Onward"/>
+                        </Grid>
+
+                        <Grid item xs={12} sm={4} justify="center" alignItems="center">
+                            <PhotoCard photoNumber="7" name="Singapore Skyline"/>
+                        </Grid>
+                        <Grid item xs={12} sm={8} justify="center" alignItems="center">
+                            <PhotoCard photoNumber="8" name="Urban Foliage"/>
+                        </Grid>
+
+                        <Grid item xs={12} sm={8} justify="center" alignItems="center">
+                            <PhotoCard photoNumber="10" name="Descent"/>
+                        </Grid>
+                        <Grid item xs={12} sm={4} justify="center" alignItems="center">
+                            <PhotoCard photoNumber="9" name="Next-Gen"/>
+                        </Grid>
+                        <Grid item xs={12} sm={6} justify="center" alignItems="center">
+                            <PhotoCard photoNumber="11" name="Stacks"/>
+                        </Grid>
+                        <Grid item xs={12} sm={6} justify="center" alignItems="center">
+                            <PhotoCard photoNumber="12" name="Stripes"/>
+                        </Grid>
+
                     </Grid>
+                    
                 </div>
             </div>
             <Footer/>
