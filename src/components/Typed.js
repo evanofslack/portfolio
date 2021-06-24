@@ -13,13 +13,12 @@ export default function Typed() {
                 strings: [
                 "Designer",
                 "Tinkerer",
-                "Coder",
                 "Developer",
-                "Contributor",
+                "Creator",
                 "Photographer",
                 ],
                 autoStart: true,
-                loop: true,
+                loop: false,
                 delay: 85,
                 pauseFor: 1500,
                 cursor: "_",
@@ -29,15 +28,3 @@ export default function Typed() {
     </ThemeProvider>
   );
 }
-
-
-/*
-
-"design products",
-"build robots",
-"integrate electronics",
-"create prototypes",
-"write software",
-"layout PCBs",              
-
-*/
