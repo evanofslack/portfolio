@@ -77,14 +77,14 @@ export default function Photography() {
                             <PhotoCard photoNumber="6" name="Island Time"/>
                         </Grid>
                         <Grid item xs={12} sm={12} justify="center" alignItems="center">
-                            <PhotoCard photoNumber="4" name="Homebound"/>
+                            <PhotoCard photoNumber="4" name="I-95"/>
                         </Grid>
 
                         <Grid item xs={12} sm={4} justify="center" alignItems="center">
-                            <PhotoCard photoNumber="7" name="Mount Faber"/>
+                            <PhotoCard photoNumber="7" name="Faber Point"/>
                         </Grid>
                         <Grid item xs={12} sm={8} justify="center" alignItems="center">
-                            <PhotoCard photoNumber="8" name="Urban Foliage"/>
+                            <PhotoCard photoNumber="8" name="Outlook"/>
                         </Grid>
 
                         <Grid item xs={12} sm={8} justify="center" alignItems="center">
@@ -98,11 +98,11 @@ export default function Photography() {
                             <PhotoCard photoNumber="11" name="Brooklyn Stacks"/>
                         </Grid>
                         <Grid item xs={12} sm={6} justify="center" alignItems="center">
-                            <PhotoCard photoNumber="12" name="Nations"/>
+                            <PhotoCard photoNumber="12" name="United"/>
                         </Grid>
 
                         <Grid item xs={12} sm={4} justify="center" alignItems="center">
-                            <PhotoCard photoNumber="15" name="Kitsilano"/>
+                            <PhotoCard photoNumber="15" name="Kits"/>
                         </Grid>
                         <Grid item xs={12} sm={8} justify="center" alignItems="center">
                             <PhotoCard photoNumber="13" name="Lion's Gate"/>

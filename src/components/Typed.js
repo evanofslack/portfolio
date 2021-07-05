@@ -18,7 +18,7 @@ export default function Typed() {
                 "Photographer",
                 ],
                 autoStart: true,
-                loop: false,
+                loop: true,
                 delay: 85,
                 pauseFor: 1500,
                 cursor: "_",

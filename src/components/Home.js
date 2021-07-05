@@ -63,15 +63,17 @@ const useStyles = makeStyles((theme) => ({
     },
 
     projectCards: {
+        margin: "0",
+        padding: "0",
         //animation: "$fade linear 1s",      // ANIMATION
     },
     seeAll: {
-        background: "white",
+        background: "#f5f5f5",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
         fontSize: "calc(24px + 5vw)",
-        paddingBottom: "3vh",
+        paddingBottom: "2vh",
     },
     projectButton: {
         fontSize: "calc(14px + 1vw)",
@@ -81,7 +83,7 @@ const useStyles = makeStyles((theme) => ({
         borderRadius: "10px",
         transition: "ease-in .15s",
         "&:hover": {
-            background: "white",
+            background: "#f5f5f5",
             color: "#40c9a9",
             textDecorationThickness: ".3vh",
           },

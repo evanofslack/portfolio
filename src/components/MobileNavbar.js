@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
   menuButton: {
     display: "flex",
     justifyContent: "flex-end",
-    //backgroundColor: "white",
+    backgroundColor: "#0a1338",
   },
 
   menu: {
