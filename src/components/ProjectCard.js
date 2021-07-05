@@ -5,12 +5,14 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles({
   imageContainer: {
-    margin: "5vw",
+    margin: "1vw",
+    paddingBottom: "1vh",
     overflow: "hidden",
-    position: "relative",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
+    borderRadius: "10px",
+    backgroundColor: "white",
   },
   image: {
     maxWidth: "100%",
@@ -18,53 +20,26 @@ const useStyles = makeStyles({
     position: "relative",
     display: "block",
   },
-  overlay: {
-    position: "absolute",
-    top: "0",
-    left: "0",
-    height: "100%",
-    width: "100%",
-    paddingLeft: "1vw",
-    paddingRight: "1vw",
-    paddingBottom: "0vh",
-    background: "rgba(255,255,255,.88)",
-    color: "black",
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "space-around",
-    justifyContent: "center",
-    opacity: "0",
-    transition: "ease 0.5s",
-        "&:hover": {
-            opacity: "1",
-            "& $name": {
-              transform: "translateY(0)",
-            },
-            "& $description": {
-              transform: "translateY(0)",
-            },
-        }, 
+  info: {
+    margin: "calc(5px + 1vw)",
   },
   name: {
     color: "#3f4047",
     fontSize: "calc(18px + .6vw)",
     fontFamily: "barlow",
-    marginBottom: "3vh",
+    marginBottom: "1.5vh",
     fontWeight: "500",
-    textAlign: "center",
-    transform: "translateY(10px)",
-    transition: "transform 0.5s",
+    textAlign: "left",
+    textDecoration: "none",
   },
   description: {
     color: "#3f4047",
-    fontSize: "calc(12px + .4vw)",
-    display: "block",
+    fontSize: "calc(12px + .25vw)",
     margin: "0",
     fontFamily: "barlow",
     fontWeight: "400",
-    textAlign: "center",
-    transform: "translateY(10px)",
-    transition: "transform 0.5s",
+    textAlign: "left",
+    textDecoration: "none",
   },
 });
 
@@ -74,19 +49,19 @@ export default function ProjectCard(props) {
 
   return (
     <div className={classes.imageContainer}>
-      <Link to={`projects/${project}`}>
+      <Link to={`projects/${project}`} style={{ textDecoration: 'none' }}>
         <img 
               src={`static/projects/${project}/cover.png`}
               alt="project" 
               className={classes.image}/>
-          <div className={classes.overlay}>
-              <div className={classes.name}>
-                  {name}
-              </div>
-              <div className={classes.description}>
-                  {description}
-              </div>
+        <div className={classes.info}>
+          <div className={classes.name}>
+           {name}
+          </div> 
+          <div className={classes.description}>
+            {description}
           </div>
+        </div>
       </Link> 
     </div>
   

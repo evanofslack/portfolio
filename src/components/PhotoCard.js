@@ -35,11 +35,11 @@ const useStyles = makeStyles({
     justifyContent: "flex-end",
     opacity: "0",
     transition: "ease 0.5s",
-        "&:hover": {
-            opacity: "1",
-            "& $name": {
-              transform: "translateY(0)",
-            },
+       "&:hover": {
+           opacity: "1",
+           "& $name": {
+             transform: "translateY(0)",
+           },
         }, 
   },
   name: {
@@ -49,7 +49,7 @@ const useStyles = makeStyles({
     marginBottom: ".75vh",
     fontWeight: "500",
     textAlign: "left",
-    transform: "translateY(5px)",
+    transform: "translateY(3px)",
     transition: "transform 0.5s",
   },
 });

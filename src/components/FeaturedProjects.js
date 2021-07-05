@@ -1,18 +1,22 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import ProjectCard from './ProjectCard';
+import ProjectCardFeatured from './ProjectCardFeatured';
 import Grid from '@material-ui/core/Grid';
 import bodyTheme from './themes/bodyTheme'
 import { ThemeProvider } from '@material-ui/core'
+import ProjectCard from "./ProjectCard";
 
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        backgroundColor: "white",
+        backgroundColor: "#f5f5f5",
+        [theme.breakpoints.down('xs')]: {
+          backgroundColor: "#f5f5f5",
+        },
         padding: "0vw",
     },
     spacing: {
-        paddingTop: "calc(40px + 3vh)",
+        //paddingTop: "calc(40px + 3vh)",
         fontSize: "calc(26px + 1.6vw)",
         color: "#3f4047",
         fontWeight: "600",
@@ -22,19 +26,31 @@ const useStyles = makeStyles((theme) => ({
         
     },
     title: {
-
+      paddingTop: "calc(30px + 1vh)",
+      paddingBottom: "calc(20px + 1vh)",
       borderRadius: "5px",
       wordWrap: "normal",
       overflowWrap: "normal",
+      color: '#0a1338',
 
     },
     container: {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        paddingRight: "5vw",
-        paddingLeft: "5vw",
+        paddingRight: "2vw",
+        paddingLeft: "2vw",
         paddingBottom: "2vw",
+    },
+    mediaQueryMobile: {
+      [theme.breakpoints.up('sm')]: {
+        display: "none",
+      },
+    },
+    mediaQueryWeb: {
+      [theme.breakpoints.down('xs')]: {
+        display: "none",
+      },
     },
 })
 )
@@ -45,8 +61,6 @@ export default function FeaturedProjects() {
     <ThemeProvider theme={bodyTheme}>
         <div className={classes.root}>
           <div className={classes.spacing}>
-
-          
             <div className={classes.title}>
               Featured
             </div>
@@ -54,16 +68,36 @@ export default function FeaturedProjects() {
           <div className={classes.container}>
               <Grid container justify="center" alignItems="center" spacing={0}>
                   <Grid item xs={12} sm={6} justify="center" alignItems="center">
-                    <ProjectCard project="toothbrush" name="Toothbrush Tester" description="Brushing simulation device designed for Tufts Dental School"/>
+                    <div className={classes.mediaQueryMobile}>
+                      <ProjectCard project="toothbrush" name="Toothbrush Tester" />
+                    </div>
+                    <div className={classes.mediaQueryWeb}>
+                      <ProjectCardFeatured project="toothbrush" name="Toothbrush Tester" description="Lifetime brushing simulation device"/>
+                    </div>
                   </Grid>
                   <Grid item xs={12} sm={6} justify="center" alignItems="center">
-                    <ProjectCard project="macropad" name="MacroPad" description="Custom PCB, 3D-printed enclosure, and software integration"/>
+                    <div className={classes.mediaQueryMobile}>
+                      <ProjectCard project="macropad" name="MacroPad"/>
+                    </div>
+                    <div className={classes.mediaQueryWeb}>
+                      <ProjectCardFeatured project="macropad" name="MacroPad" description="Custom PCB and 3D printed housing"/>
+                    </div>
                   </Grid>
                   <Grid item xs={12} sm={6} justify="center" alignItems="center">
-                      <ProjectCard project="splitflap" name="Splitflap Display" description="Acrylic enclosure for opensource project"/>
+                    <div className={classes.mediaQueryMobile}>
+                      <ProjectCard project="splitflap" name="Splitflap Display"/>
+                    </div>
+                    <div className={classes.mediaQueryWeb}>
+                      <ProjectCardFeatured project="splitflap" name="Splitflap Display" description="Acrylic enclosure for opensource project"/>
+                    </div>
                   </Grid>
                   <Grid item xs={12} sm={6} justify="center" alignItems="center">
-                      <ProjectCard project="spotify" name="e-Paper Spotify Clock" description="E-Ink screen that displays time, weather, and what I'm listening to on Spotify"/>
+                  <div className={classes.mediaQueryMobile}>
+                      <ProjectCard project="spotify" name="e-Paper Spotify Clock"/>
+                    </div>
+                    <div className={classes.mediaQueryWeb}>
+                      <ProjectCardFeatured project="spotify" name="e-Paper Spotify Clock" description="E-Ink screen that displays my Spotify feed"/>
+                    </div>
                   </Grid>
               </Grid>
           </div>

@@ -13,9 +13,8 @@ export default function Typed() {
                 strings: [
                 "Designer",
                 "Tinkerer",
-                "Coder",
                 "Developer",
-                "Contributor",
+                "Creator",
                 "Photographer",
                 ],
                 autoStart: true,
@@ -29,15 +28,3 @@ export default function Typed() {
     </ThemeProvider>
   );
 }
-
-
-/*
-
-"design products",
-"build robots",
-"integrate electronics",
-"create prototypes",
-"write software",
-"layout PCBs",              
-
-*/
