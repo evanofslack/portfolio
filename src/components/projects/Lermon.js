@@ -14,7 +14,17 @@ export default function Lermon() {
     const classes = useStyles();
   return (
     <div className={classes.root}> 
-        <Template title="Autonomous Biped">
+         <Template 
+          title="LERMON"
+          project = "lermon"
+          tagline="Autonomous Obstacle Detection"
+          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+          ullamco laboris nisi ut aliquip ex ea commodo consequat."
+          timeframe="6 weeks"
+          github="www.github.com"
+          tech="OOP"
+        >
         </Template>
 
     </div>

@@ -62,6 +62,10 @@ const useStyles = makeStyles((theme) => ({
         marginBottom: "0",
         fontFamily: "barlow",
     },
+    link: {
+        textDecoration: "inherit",
+        color: "inherit",
+    },
     email: {
         title:"Send me an email",
         color: "#0a1338",
@@ -87,13 +91,20 @@ export default function About() {
                             className={classes.image}/>
                     </div>
                     
+
                     <p className={classes.paragraph}>
-                        I'm passionate about designing integrated products that seamlessly combine hardware and software.
+                        I'm a mechanical engineer with a passion for designing integrated products that seamlessly combine hardware and software. 
                     </p>
+
                     <p className={classes.paragraph}>
-                        As a recent graduate from Tufts University with a degree in Mechanical Engineering, I am skilled 
-                        in 3D modeling, rapid prototyping, electronic layout, and embedded software development.
+                        I recently graduated from Tufts Unversity and am currently working as a mechanical design engineer
+                        on the new product development team at <a className={classes.link} href="https://www.sensata.com">Sensata Technologies</a>. I've previously worked at &nbsp;
+                        <a className={classes.link} href="https://solchroma.com">Solchroma Technologies</a> as a mechanical engineering intern where I helped 
+                        to prototype and validate digitial reflective displays. Before that I worked at <a className={classes.link} href="https://www.precisionnanosystems.com">
+                        Precision Nanosystems</a> as an instrumentation engineering intern designing and sourcing parts for their desktop
+                        nanoparticle assembler device. 
                     </p>
+
                     <p className={classes.paragraph}>
                         This website showcases my selected work from internships, class projects and personal endeavors. 
                         If you have any questions or inquiries feel free to reach out to me: &nbsp;

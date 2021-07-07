@@ -23,10 +23,10 @@ const useStyles = makeStyles((theme) => ({
         background: "#0a1338",                  // Primary Navy
     },
     name: {
-        marginTop: "2vw",
+        marginTop: "1vh",
         marginLeft: "8%",
         marginRight: "5%",
-        marginBottom: "2vw",
+        marginBottom: "2vh",
         fontSize: "calc(24px + 5vw)",
         color: 'white',
         transform: "translateY(0)",
@@ -51,7 +51,7 @@ const useStyles = makeStyles((theme) => ({
         marginLeft: "8%",
         marginRight: "5%",
         //paddingBottom: "8vh",
-        paddingBottom: "5vh"
+        paddingBottom: "7vh"
     },
     typing: {  
         color: "#40c9a9",                     // Secondary Turquoise

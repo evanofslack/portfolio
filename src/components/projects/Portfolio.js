@@ -14,7 +14,17 @@ export default function Portfolio() {
     const classes = useStyles();
   return (
     <div className={classes.root}> 
-        <Template title="Personal Website">
+         <Template 
+          title="Portfolio Website"
+          project = "portfolio"
+          tagline="Responsive React App"
+          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+          ullamco laboris nisi ut aliquip ex ea commodo consequat."
+          timeframe="2 months"
+          github="www.github.com"
+          tech="React"
+        >
         </Template>
 
     </div>

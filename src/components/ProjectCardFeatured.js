@@ -83,9 +83,9 @@ export default function ProjectCard(props) {
               <div className={classes.name}>
                   {name}
               </div>
-              <div className={classes.description}>
+              <p className={classes.description}>
                   {description}
-              </div>
+              </p>
           </div>
       </Link> 
     </div>
