@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
       textDecorationThickness: ".3vh",
     },
     "&.active": {
-      color: "#40c9a9", 
+      color: "#40c9a9", // YELLOW
       
     },
 },

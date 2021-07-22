@@ -18,9 +18,11 @@ export default function Spotify() {
           title="Spotify API Clock"
           project = "spotify"
           tagline="Displays my Spotify Feed"
+          
           description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
           incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
           ullamco laboris nisi ut aliquip ex ea commodo consequat."
+
           timeframe="1 month"
           github="www.github.com"
           tech="Open source"

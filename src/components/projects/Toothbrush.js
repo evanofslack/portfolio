@@ -8,25 +8,22 @@ const useStyles = makeStyles((theme) => ({
         width: "100%",
         overflow: "auto",
     },
-})
-)
+}));
 export default function Spotify() {
     const classes = useStyles();
-  return (
-    <div className={classes.root}> 
-        <Template 
-          title="Toothbrush Tester"
-          project = "toothbrush"
-          tagline="Lifetime Simulation Device"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-          ullamco laboris nisi ut aliquip ex ea commodo consequat."
-          timeframe="12 months"
-          github="www.github.com"
-          tech="SolidWorks"
-        >
-        </Template>
-
-    </div>
-  );
+    const techList = ["SolidWorks", "Arduino", "FDM Printing", "Systems Integration"];
+    return (
+        <div className={classes.root}>
+            <Template
+                title="Toothbrush Tester"
+                project="toothbrush"
+                tagline="Lifetime Simulation Device"
+                description="In collaboration with the Tufts Dental School, I worked with a team of four engineers to design and build a lifetime
+                simulation device capable of stress testing up to 10 toothbrushes over thousands of cycles. After lots of iterating and testing, we
+                delivered a fully functional prototype and were awarded the James O'Leary award for most outstanding capstone design out of 60 other students."
+                timeframe="4 months"
+                techList={techList}
+            ></Template>
+        </div>
+    );
 }

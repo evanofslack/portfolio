@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
         ". alertMessage"
         ". submit"
         `,
-    },
+    }, 
     inputName: {
       gridArea: "inputName",
       alignSelf: "center",
