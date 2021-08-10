@@ -1,15 +1,13 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Navbar from "./Navbar";
-import { ThemeProvider } from '@material-ui/core';
-import bodyTheme from './themes/bodyTheme';
+import { ThemeProvider } from "@material-ui/core";
+import bodyTheme from "./themes/bodyTheme";
 import Footer from "./Footer";
 import ParticleBackground from "./ParticleBackground";
 import Email from "./Email";
 
-
 const useStyles = makeStyles((theme) => ({
-    
     root: {
         height: "100vh",
         width: "100%",
@@ -29,10 +27,10 @@ const useStyles = makeStyles((theme) => ({
         paddingBottom: "3vw",
         paddingTop: "3vw",
         fontWeight: "400",
-        color: '#0a1338',
+        color: "#0a1338",
         background: "#f5f5f5",
         borderRadius: ".7vh",
-    },    
+    },
     imageContainer: {
         display: "flex",
         justifyContent: "space-around",
@@ -67,55 +65,65 @@ const useStyles = makeStyles((theme) => ({
         color: "inherit",
     },
     email: {
-        title:"Send me an email",
+        title: "Send me an email",
         color: "#0a1338",
-    }
-})
-)
+    },
+}));
 export default function About() {
     const classes = useStyles();
-  return (
-    <ThemeProvider theme={bodyTheme}> 
-        <div className={classes.root}>
-            <Navbar/>
-            <div className={classes.container}>
-                <div className={classes.about}>
-                    <div className={classes.imageContainer}>
-                        <h1 className={classes.header}>
-                            About Me
-                        </h1>
-                        <img 
-                            src="/static/headshot.jpeg" 
-                            //src="/static/slackSTL.png" 
-                            alt="headshot" 
-                            className={classes.image}/>
+    return (
+        <ThemeProvider theme={bodyTheme}>
+            <div className={classes.root}>
+                <Navbar />
+                <div className={classes.container}>
+                    <div className={classes.about}>
+                        <div className={classes.imageContainer}>
+                            <h1 className={classes.header}>About Me</h1>
+                            <img
+                                src="/static/headshot.jpeg"
+                                //src="/static/slackSTL.png"
+                                alt="headshot"
+                                className={classes.image}
+                            />
+                        </div>
+
+                        <p className={classes.paragraph}>
+                            I'm a mechanical engineer with a passion for designing integrated
+                            products that seamlessly combine hardware and software.
+                        </p>
+
+                        <p className={classes.paragraph}>
+                            I'm currently working as a mechanical design engineer on the new product
+                            development team at{" "}
+                            <a className={classes.link} href="https://www.sensata.com">
+                                Sensata Technologies
+                            </a>
+                            , designing next generation IoT sensors. I've previously interned at
+                            &nbsp;{" "}
+                            <a className={classes.link} href="https://solchroma.com">
+                                Solchroma Technologies
+                            </a>{" "}
+                            and{" "}
+                            <a className={classes.link} href="https://www.precisionnanosystems.com">
+                                Precision Nanosystems
+                            </a>{" "}
+                            as a mechanical engineer.
+                        </p>
+
+                        <p className={classes.paragraph}>
+                            This website showcases my selected work from internships, class projects
+                            and personal endeavors. If you have any questions or inquiries feel free
+                            to reach out to me: &nbsp;
+                            <a className={classes.email} href="mailto:evan.slack@outlook.com">
+                                evan.slack@outlook.com
+                            </a>
+                        </p>
+                        <Email />
                     </div>
-                    
-
-                    <p className={classes.paragraph}>
-                        I'm a mechanical engineer with a passion for designing integrated products that seamlessly combine hardware and software. 
-                    </p>
-
-                    <p className={classes.paragraph}>
-                        I recently graduated from Tufts Unversity and am currently working as a mechanical design engineer
-                        on the new product development team at <a className={classes.link} href="https://www.sensata.com">Sensata Technologies</a>. I've previously worked at &nbsp;
-                        <a className={classes.link} href="https://solchroma.com">Solchroma Technologies</a> as a mechanical engineering intern where I helped 
-                        to prototype and validate digitial reflective displays. Before that I worked at <a className={classes.link} href="https://www.precisionnanosystems.com">
-                        Precision Nanosystems</a> as an instrumentation engineering intern designing and sourcing parts for their desktop
-                        nanoparticle assembler device. 
-                    </p>
-
-                    <p className={classes.paragraph}>
-                        This website showcases my selected work from internships, class projects and personal endeavors. 
-                        If you have any questions or inquiries feel free to reach out to me: &nbsp;
-                        <a className={classes.email} href="mailto:evan.slack@outlook.com">evan.slack@outlook.com</a>
-                    </p>
-                    <Email/>
                 </div>
+                <Footer />
+                <ParticleBackground />
             </div>
-            <Footer/>
-            <ParticleBackground/>
-        </div>
-    </ThemeProvider>
-  );
+        </ThemeProvider>
+    );
 }

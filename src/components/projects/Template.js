@@ -1,8 +1,10 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Navbar from "../Navbar";
-import Footer from "../Footer";
 import Grid from "@material-ui/core/Grid";
+import IconButton from "@material-ui/core/IconButton";
+import Tooltip from "@material-ui/core/Tooltip";
+import GitHubIcon from "@material-ui/icons/GitHub";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -11,13 +13,14 @@ const useStyles = makeStyles((theme) => ({
     },
     pic1: {
         width: "100%",
-        maxWidth: "600px",
+        maxWidth: "700px",
         height: "auto",
+
         position: "relative",
         display: "block",
         padding: "2vh",
         paddingTop: "5vh",
-        paddingBottom: "3vh",
+        paddingBottom: "5vh",
     },
     pic2: {
         width: "100%",
@@ -36,11 +39,11 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: "center",
     },
     body: {
-        margin: "3vw",
+        marginRight: "4vw",
+        marginLeft: "4vw",
     },
     title: {
-        //margin: "35vh 5vw",
-        fontSize: "min(10vw, 50px)",
+        fontSize: "min(9vw, 45px)",
         color: "#0a0a0a",
         margin: "0",
         padding: "0",
@@ -56,7 +59,8 @@ const useStyles = makeStyles((theme) => ({
         //paddingBottom: "4vh",
     },
     description: {
-        fontSize: "min(5vw, 22px)",
+        fontSize: "min(8vw, 20px)",
+        paddingRight: "2vw",
         color: "#0a0a0a",
         fontWeight: "400",
         paddingBottom: "0vh",
@@ -119,12 +123,8 @@ export default function Template(props) {
                                     Time Frame:
                                     <p className={classes.overviewDesc}>{timeframe}</p>
                                 </div>
-                                <div className={classes.overviewElement}>
-                                    Github:
-                                    <p className={classes.overviewDesc}>{github}</p>
-                                </div>
                             </Grid>
-                            <Grid item xs={12} sm={8} md={12}>
+                            <Grid item xs={12} sm={4} md={12}>
                                 <div className={classes.overview}>
                                     <div className={classes.overviewElement}>
                                         Technologies:
@@ -132,28 +132,33 @@ export default function Template(props) {
                                     </div>
                                 </div>
                             </Grid>
+                            <Grid item xs={12} sm={4} md={12}>
+                                {github && (
+                                    <div className={classes.overviewElement}>
+                                        <Tooltip title="View on Github">
+                                            <IconButton
+                                                href={github}
+                                                className={classes.button}
+                                                size="Large"
+                                                disableFocusRipple
+                                                disableRipple
+                                                style={{
+                                                    color: "#0a0a0a",
+                                                    backgroundColor: "transparent",
+                                                }}
+                                            >
+                                                <GitHubIcon className={classes.icon} />
+                                            </IconButton>
+                                        </Tooltip>
+                                    </div>
+                                )}
+                            </Grid>
+                            <Grid item xs={12} sm={8} md={12}></Grid>
                         </Grid>
                     </Grid>
                 </Grid>
-                <Grid container justifyContent="flex-end" alignItems="center">
-                    <Grid item xs={12} md={6}>
-                        <img
-                            src={`static/projects/${project}/pic2.png`}
-                            alt="project"
-                            className={classes.pic2}
-                        />
-                    </Grid>
-                    <Grid item xs={12} md={6}>
-                        <img
-                            src={`static/projects/${project}/pic3.png`}
-                            alt="project"
-                            className={classes.pic2}
-                        />
-                    </Grid>
-                </Grid>
-                <div className={classes.empty}></div>
+                {/* <div className={classes.empty}></div> */}
             </div>
-            <Footer />
         </div>
     );
 }

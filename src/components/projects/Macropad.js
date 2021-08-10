@@ -8,25 +8,25 @@ const useStyles = makeStyles((theme) => ({
         width: "100%",
         overflow: "auto",
     },
-})
-)
+}));
 export default function Spotify() {
     const classes = useStyles();
-  return (
-    <div className={classes.root}> 
-         <Template 
-          title="MacroPad"
-          project = "macropad"
-          tagline="Custom HID Controller"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-          ullamco laboris nisi ut aliquip ex ea commodo consequat."
-          timeframe="3 weeks"
-          github="www.github.com"
-          tech="KiCAD"
-        >
-        </Template>
-
-    </div>
-  );
+    const project = "macropad";
+    const github = "https://github.com/evanofslack/MacroPad";
+    const techList = ["KiCad", "Python", "SolidWorks"];
+    return (
+        <div className={classes.root}>
+            <Template
+                title="MacroPad"
+                project={project}
+                tagline="Custom HID Controller"
+                description="Motivated by the seemingly endless amount of zoom meetings, I wanted a quick and fun way to
+                interface with my computer. Utilizing a custom designed PCB, laser-cut housing, and open-source software, 
+                I created a miniature keyboard capable of executing programable shortcuts. "
+                timeframe="3 weeks"
+                github={github}
+                techList={techList}
+            ></Template>
+        </div>
+    );
 }
