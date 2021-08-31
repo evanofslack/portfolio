@@ -6,10 +6,12 @@ import IconButton from "@material-ui/core/IconButton";
 import Tooltip from "@material-ui/core/Tooltip";
 import GitHubIcon from "@material-ui/icons/GitHub";
 
+// BREAK TEMPLATE INTO SMALLER COMPONENTS AND ADD TO PROJECTS INDIVIDUALLY
+// WEIRD HORIZONTAL SCOLL BAR
+
 const useStyles = makeStyles((theme) => ({
     root: {
-        backgroundColor: "white",
-        padding: "2vw",
+        background: "white",
     },
     pic1: {
         width: "100%",
@@ -37,6 +39,7 @@ const useStyles = makeStyles((theme) => ({
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
+        marginBottom: "8vh",
     },
     body: {
         marginRight: "4vw",
@@ -83,9 +86,6 @@ const useStyles = makeStyles((theme) => ({
         padding: "0",
         //paddingBottom: "4vh",
     },
-    empty: {
-        height: "80vh",
-    },
 }));
 
 export default function Template(props) {
@@ -96,69 +96,66 @@ export default function Template(props) {
     return (
         <div>
             <Navbar />
-            <div className={classes.root}>
-                <div className={classes.pic1Container}>
-                    <img
-                        src={`static/projects/${project}/pic1.png`}
-                        alt="project"
-                        className={classes.pic1}
-                    />
-                </div>
-                <Grid
-                    container
-                    direction="row-reverse"
-                    justifyContent="center"
-                    alignItems="flex-start"
-                    className={classes.body}
-                >
-                    <Grid item xs={12} md={9}>
-                        <h5 className={classes.title}>{title}</h5>
-                        <h6 className={classes.tagline}>{tagline}</h6>
-                        <p className={classes.description}>{description}</p>
-                    </Grid>
-                    <Grid item xs={12} md={3}>
-                        <Grid container>
-                            <Grid item xs={12} sm={4} md={12}>
-                                <div className={classes.overviewElement}>
-                                    Time Frame:
-                                    <p className={classes.overviewDesc}>{timeframe}</p>
-                                </div>
-                            </Grid>
-                            <Grid item xs={12} sm={4} md={12}>
-                                <div className={classes.overview}>
-                                    <div className={classes.overviewElement}>
-                                        Technologies:
-                                        <ul className={classes.overviewDesc}>{listItems}</ul>
-                                    </div>
-                                </div>
-                            </Grid>
-                            <Grid item xs={12} sm={4} md={12}>
-                                {github && (
-                                    <div className={classes.overviewElement}>
-                                        <Tooltip title="View on Github">
-                                            <IconButton
-                                                href={github}
-                                                className={classes.button}
-                                                size="Large"
-                                                disableFocusRipple
-                                                disableRipple
-                                                style={{
-                                                    color: "#0a0a0a",
-                                                    backgroundColor: "transparent",
-                                                }}
-                                            >
-                                                <GitHubIcon className={classes.icon} />
-                                            </IconButton>
-                                        </Tooltip>
-                                    </div>
-                                )}
-                            </Grid>
-                            <Grid item xs={12} sm={8} md={12}></Grid>
+            <div className={classes.pic1Container}>
+                <img
+                    src={`static/projects/${project}/pic1.png`}
+                    alt="project"
+                    className={classes.pic1}
+                />
+            </div>
+            <Grid
+                container
+                direction="row-reverse"
+                justifyContent="center"
+                alignItems="flex-start"
+                className={classes.body}
+            >
+                <Grid item xs={12} md={9}>
+                    <h5 className={classes.title}>{title}</h5>
+                    <h6 className={classes.tagline}>{tagline}</h6>
+                    <p className={classes.description}>{description}</p>
+                </Grid>
+                <Grid item xs={12} md={3}>
+                    <Grid container>
+                        <Grid item xs={12} sm={4} md={12}>
+                            <div className={classes.overviewElement}>
+                                Time Frame:
+                                <p className={classes.overviewDesc}>{timeframe}</p>
+                            </div>
                         </Grid>
+                        <Grid item xs={12} sm={4} md={12}>
+                            <div className={classes.overview}>
+                                <div className={classes.overviewElement}>
+                                    Technologies:
+                                    <ul className={classes.overviewDesc}>{listItems}</ul>
+                                </div>
+                            </div>
+                        </Grid>
+                        <Grid item xs={12} sm={4} md={12}>
+                            {github && (
+                                <div className={classes.overviewElement}>
+                                    <Tooltip title="View on Github">
+                                        <IconButton
+                                            href={github}
+                                            className={classes.button}
+                                            size="Large"
+                                            disableFocusRipple
+                                            disableRipple
+                                            style={{
+                                                color: "#0a0a0a",
+                                                backgroundColor: "transparent",
+                                            }}
+                                        >
+                                            <GitHubIcon className={classes.icon} />
+                                        </IconButton>
+                                    </Tooltip>
+                                </div>
+                            )}
+                        </Grid>
+                        <Grid item xs={12} sm={8} md={12}></Grid>
                     </Grid>
                 </Grid>
-                {/* <div className={classes.empty}></div> */}
-            </div>
+            </Grid>
         </div>
     );
 }

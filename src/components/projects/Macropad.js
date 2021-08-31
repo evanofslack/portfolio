@@ -1,12 +1,60 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
+import Carousel from "react-material-ui-carousel";
 import Template from "./Template";
+import Footer from "../Footer";
 
 const useStyles = makeStyles((theme) => ({
     root: {
         height: "100vh",
         width: "100%",
         overflow: "auto",
+    },
+    contributions: {
+        backgroundColor: "white",
+        paddingRight: "6vw",
+        paddingLeft: "6vw",
+        paddingBottom: "2vw",
+        paddingTop: "10vh",
+        margin: "0",
+    },
+    description: {
+        fontSize: "min(8vw, 20px)",
+        paddingRight: "2vw",
+        color: "#0a0a0a",
+        fontWeight: "400",
+        paddingBottom: "0vh",
+        width: "100%",
+    },
+    extra: {
+        backgroundColor: "white",
+        paddingRight: "6vw",
+        paddingLeft: "6vw",
+        paddingBottom: "2vw",
+        paddingTop: "0vw",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        margin: "0",
+    },
+    gif: {
+        width: "100%",
+        maxWidth: "800px",
+        height: "auto",
+        position: "relative",
+        display: "block",
+        padding: "2vh",
+        paddingTop: "0vh",
+        paddingBottom: "0vh",
+        margin: "0",
+    },
+    pic2: {
+        width: "100%",
+        maxWidth: "700px",
+        height: "auto",
+        position: "relative",
+        display: "block",
+        margin: "0",
     },
 }));
 export default function Spotify() {
@@ -27,6 +75,78 @@ export default function Spotify() {
                 github={github}
                 techList={techList}
             ></Template>
+            <div className={classes.extra}>
+                <img
+                    src={`static/projects/${project}/rotate.gif`}
+                    alt="project"
+                    className={classes.gif}
+                />
+            </div>
+            <div className={classes.contributions}>
+                <h1>Project Overview</h1>
+                <p className={classes.description}>
+                    My first real attempt at PCB layout went surprisingly well. This macropad
+                    actually gets a lot of use in my day to day as a media controller.{" "}
+                </p>
+                <p className={classes.description}>
+                    <li> Featuring Raspberry Pi Pico, Cherry MX switches, and a rotary encoder</li>
+                    <li>Board schematic and layout done in KiCAD</li>
+                    <li>
+                        Bootstrapped with open-source circuitpython Human Interface Device (HID)
+                        library
+                    </li>
+                    <li> Custom 3D-printed and laser cut housing</li>
+                </p>
+            </div>
+            <div className={classes.extra}>
+                <Carousel
+                    navButtonsAlwaysVisible={true}
+                    fullHeightHover={false}
+                    navButtonsProps={{
+                        style: {
+                            backgroundColor: "grey",
+                            borderRadius: "5px",
+                        },
+                    }}
+                    navButtonsWrapperProps={{
+                        style: {
+                            bottom: "0",
+                            top: "unset",
+                        },
+                    }}
+                >
+                    <div className={classes.carousel}>
+                        <img
+                            src={`static/projects/${project}/layout.png`}
+                            alt="project"
+                            className={classes.pic2}
+                        />
+                    </div>
+
+                    <div className={classes.carousel}>
+                        <img
+                            src={`static/projects/${project}/schematic.png`}
+                            alt="project"
+                            className={classes.pic2}
+                        />
+                    </div>
+                    <div className={classes.carousel}>
+                        <img
+                            src={`static/projects/${project}/render1.png`}
+                            alt="project"
+                            className={classes.pic2}
+                        />
+                    </div>
+                    <div className={classes.carousel}>
+                        <img
+                            src={`static/projects/${project}/pcb.png`}
+                            alt="project"
+                            className={classes.pic2}
+                        />
+                    </div>
+                </Carousel>
+            </div>
+            <Footer />
         </div>
     );
 }

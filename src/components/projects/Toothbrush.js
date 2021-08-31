@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
         paddingRight: "6vw",
         paddingLeft: "6vw",
         paddingBottom: "2vw",
-        paddingTop: "2vw",
+        paddingTop: "10vh",
         margin: "0",
     },
     description: {
@@ -94,7 +94,7 @@ export default function Toothbrush() {
                 timeframe="4 months"
                 github={false}
                 techList={techList}
-            ></Template>
+            />
             <div className={classes.extra}>
                 <img
                     src={`static/projects/${project}/TBT_closeup.png`}
@@ -105,28 +105,29 @@ export default function Toothbrush() {
             <div className={classes.contributions}>
                 <h1>My Contributions</h1>
                 <p className={classes.description}>
-                    As design lead, I generated the majority of the physical design concepts,
-                    produced and maintained a 350+ part SolidWorks assembly, tested the prototype
-                    designs, and drove feedback-driven iteration. I created technical drawings with
-                    GD&T and communicated machining instructions with the machine shop. I also
-                    collaborated with our electrical engineer to fabricate a custom PCB which
-                    facilitated the connections between the Arduino, power supplies, motor drivers,
-                    DC pump, limit switches, and LCD screen.
+                    As the owner of several core mechanical concepts, I advanced the hardware all
+                    the way from ideation to final product{" "}
+                </p>
+                <p className={classes.description}>
+                    <li>
+                        Designed 20+ unique parts in SolidWorks for rapid prototyping with Prussia
+                        MK3 printer
+                    </li>
+                    <li>Maintained 300+ part assembly, while managing BOM, sourcing, and budget</li>
+                    <li>Integrated Arduino, motor drivers, DC pump, and LCD screen</li>
                 </p>
             </div>
             <div className={classes.extra}>
                 <Carousel
                     navButtonsAlwaysVisible={true}
-                    fullHeightHover={false} // We want the nav buttons wrapper to only be as big as the button element is
+                    fullHeightHover={false}
                     navButtonsProps={{
-                        // Change the colors and radius of the actual buttons. THIS STYLES BOTH BUTTONS
                         style: {
                             backgroundColor: "grey",
                             borderRadius: "5px",
                         },
                     }}
                     navButtonsWrapperProps={{
-                        // Move the buttons to the bottom. Unsetting top here to override default style.
                         style: {
                             bottom: "0",
                             top: "unset",
