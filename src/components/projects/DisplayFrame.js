@@ -8,25 +8,22 @@ const useStyles = makeStyles((theme) => ({
         width: "100%",
         overflow: "auto",
     },
-})
-)
+}));
 export default function DisplayFrame() {
     const classes = useStyles();
-  return (
-    <div className={classes.root}> 
-        <Template 
-          title="Display Frame"
-          project = "inkdisplay"
-          tagline="Modular Unit Testing Frame"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+    return (
+        <div className={classes.root}>
+            <Template
+                title="Display Frame"
+                project="inkdisplay"
+                tagline="Modular Unit Testing Frame"
+                description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
           incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
           ullamco laboris nisi ut aliquip ex ea commodo consequat."
-          timeframe="1 month"
-          github="www.github.com"
-          tech="Sheetmetal"
-        >
-        </Template>
-
-    </div>
-  );
+                timeframe="1 month"
+                github="www.github.com"
+                tech="Sheetmetal"
+            ></Template>
+        </div>
+    );
 }

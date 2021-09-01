@@ -6,12 +6,11 @@ import IconButton from "@material-ui/core/IconButton";
 import Tooltip from "@material-ui/core/Tooltip";
 import GitHubIcon from "@material-ui/icons/GitHub";
 
-// BREAK TEMPLATE INTO SMALLER COMPONENTS AND ADD TO PROJECTS INDIVIDUALLY
-// WEIRD HORIZONTAL SCOLL BAR
-
 const useStyles = makeStyles((theme) => ({
     root: {
+        width: "100%",
         background: "white",
+        overflow: "hidden",
     },
     pic1: {
         width: "100%",
@@ -94,7 +93,7 @@ export default function Template(props) {
     const listItems = techList.map((tech) => <div>{tech}</div>);
 
     return (
-        <div>
+        <div className={classes.root}>
             <Navbar />
             <div className={classes.pic1Container}>
                 <img
