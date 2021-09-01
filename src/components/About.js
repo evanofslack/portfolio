@@ -81,7 +81,6 @@ export default function About() {
                             <h1 className={classes.header}>About Me</h1>
                             <img
                                 src="/static/headshot.jpeg"
-                                //src="/static/slackSTL.png"
                                 alt="headshot"
                                 className={classes.image}
                             />

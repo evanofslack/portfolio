@@ -16,7 +16,6 @@ const useStyles = makeStyles((theme) => ({
         padding: "0vw",
     },
     spacing: {
-        //paddingTop: "calc(40px + 3vh)",
         fontSize: "calc(26px + 1.6vw)",
         color: "#3f4047",
         fontWeight: "600",

@@ -20,7 +20,6 @@ const useStyles = makeStyles((theme) => ({
         paddingTop: "calc(40px + 3vh)",
         paddingBottom: "calc(40px + 3vh)",
         fontSize: "calc(26px + 1.6vw)",
-        //color: "#0a1338",
         color: "#3f4047",
         fontWeight: "600",
         textAlign: "center",
