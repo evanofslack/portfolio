@@ -4,7 +4,7 @@ import MobileNavbar from "./MobileNavbar";
 import Navbar from "./Navbar";
 import { ThemeProvider } from "@material-ui/core";
 import myTheme from "./themes/myTheme";
-import Typed from "./Typed";
+import TextCycler from "./TextCycler";
 import FeaturedProjects from "./FeaturedProjects";
 import Footer from "./Footer";
 import Button from "@material-ui/core/Button";
@@ -21,11 +21,11 @@ const useStyles = makeStyles((theme) => ({
         background: "#0a1338", // Primary Navy
     },
     name: {
-        marginTop: "1vh",
+        marginTop: "5vh",
         marginLeft: "8%",
         marginRight: "5%",
-        marginBottom: "2vh",
-        fontSize: "calc(24px + 5vw)",
+        marginBottom: "6vh",
+        fontSize: "calc(40px + 4vw)",
         color: "white",
         transform: "translateY(0)",
     },
@@ -44,11 +44,11 @@ const useStyles = makeStyles((theme) => ({
         alignItems: "center",
         marginLeft: "8%",
         marginRight: "5%",
-        paddingBottom: "11vh",
+        paddingBottom: "12vh",
     },
     typing: {
         color: "#40c9a9", // Secondary Turquoise
-        fontSize: "calc(9px + 2vw)",
+        fontSize: "calc(12px + 2vw)",
         fontWeight: "600",
         wordWrap: "break-word",
         overflowWrap: "break-word",
@@ -64,20 +64,65 @@ const useStyles = makeStyles((theme) => ({
         alignItems: "center",
         justifyContent: "center",
         fontSize: "calc(24px + 5vw)",
+        paddingTop: "10px",
         paddingBottom: "2vh",
     },
+
     projectButton: {
         fontSize: "calc(14px + 1vw)",
         textTransform: "capitalize",
-        borderColor: "#0a1338",
-        borderStyle: "solid",
+        background: "white",
         borderRadius: "10px",
+        boxShadow: ".5px .5px 2px lightGray",
         transition: "ease-in .15s",
         "&:hover": {
-            background: "#f5f5f5",
             color: "#40c9a9",
-            textDecorationThickness: ".3vh",
+            background: "white",
+            boxShadow: ".5px .5px 6px lightGray",
         },
+    },
+    about_header: {
+        paddingTop: "110px",
+        paddingBottom: "10px",
+        borderRadius: "5px",
+        wordWrap: "normal",
+        overflowWrap: "normal",
+        color: "#0a1338",
+        background: "#f5f5f5",
+        fontSize: "calc(26px + 1.6vw)",
+        fontWeight: "600",
+        textAlign: "center",
+        fontFamily: "barlow",
+    },
+    about_container: {
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        background: "#f5f5f5",
+
+        paddingBottom: "40px",
+    },
+    about: {
+        paddingTop: "15px",
+        paddingBottom: "15px",
+        paddingLeft: "35px",
+        paddingRight: "35px",
+        width: "70vw",
+        maxWidth: "600px",
+        borderRadius: "10px",
+        wordWrap: "normal",
+        overflowWrap: "normal",
+        color: "#0a1338",
+        background: "white",
+        fontSize: "calc(13px + .4vw)",
+        fontWeight: "340",
+        lineHeight: "1.6em",
+        fontFamily: "barlow",
+        boxShadow: ".5px .5px 2px lightGray",
+    },
+    link: {
+        textDecoration: "inherit",
+        color: "inherit",
     },
     displayMobile: {
         [theme.breakpoints.up("sm")]: {
@@ -108,7 +153,7 @@ export default function Home() {
                             <div className={classes.typing}>Mechanical Engineer &nbsp;</div>
                             <div className={classes.typing}>and &nbsp;</div>
                             <div className={classes.typing}>
-                                <Typed />
+                                <TextCycler />
                             </div>
                         </div>
                     </div>
@@ -118,6 +163,7 @@ export default function Home() {
                 </div>
                 <div className={classes.seeAll}>
                     <Button
+                        disableRipple
                         className={classes.projectButton}
                         component={NavLink}
                         to="/projects"
@@ -127,6 +173,29 @@ export default function Home() {
                         <ChevronRightIcon />
                     </Button>
                 </div>
+                <div className={classes.about_header}>About Me</div>
+                <div className={classes.about_container}>
+                    <p className={classes.about}>
+                        I'm graduated from Tufts University in 2021 with a degree in mechanical
+                        engineering. I currently work at Sensata Technologies designing IoT sensors
+                        for industrial applications.
+                        <br></br>
+                        <br></br>
+                        Recently I've been working on fullstack web applications with Python,
+                        Postgres and React. I'm excited about the intersection of product design,
+                        software architecture, and embedded systems.
+                        <br></br>
+                        <br></br>
+                        Read a bit more about me{" "}
+                        <a className={classes.link} href="/about">
+                            <u>here</u> or{" "}
+                            <a className={classes.link} href="mailto:evan.slack@outlook.com">
+                                <u>contact me</u>.
+                            </a>
+                        </a>
+                    </p>
+                </div>
+
                 <Footer />
             </div>
         </ThemeProvider>

@@ -21,11 +21,10 @@ const useStyles = makeStyles((theme) => ({
         fontWeight: "600",
         textAlign: "center",
         fontFamily: "barlow",
-        background: "#white",
     },
     title: {
-        paddingTop: "calc(30px + 1vh)",
-        paddingBottom: "calc(20px + 1vh)",
+        paddingTop: "80px",
+        paddingBottom: "20px",
         borderRadius: "5px",
         wordWrap: "normal",
         overflowWrap: "normal",
@@ -66,7 +65,7 @@ export default function FeaturedProjects() {
                                 <ProjectCard project="toothbrush" name="Toothbrush Tester" />
                             </div>
                             <div className={classes.mediaQueryWeb}>
-                                <ProjectCardFeatured
+                                <ProjectCard
                                     project="toothbrush"
                                     name="Toothbrush Tester"
                                     description="Lifetime brushing simulation device"
@@ -78,7 +77,7 @@ export default function FeaturedProjects() {
                                 <ProjectCard project="macropad" name="MacroPad" />
                             </div>
                             <div className={classes.mediaQueryWeb}>
-                                <ProjectCardFeatured
+                                <ProjectCard
                                     project="macropad"
                                     name="MacroPad"
                                     description="Custom PCB and 3D printed housing"
@@ -92,7 +91,7 @@ export default function FeaturedProjects() {
                             </div>
                             <div className={classes.mediaQueryWeb}>
                                 <Hidden smDown>
-                                    <ProjectCardFeatured
+                                    <ProjectCard
                                         project="spotify"
                                         name="e-Paper Spotify Clock"
                                         description="E-Ink screen that displays my Spotify feed"
