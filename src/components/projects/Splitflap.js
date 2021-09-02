@@ -24,7 +24,7 @@ export default function Spotify() {
         <div className={classes.root}>
             <Template
                 title="Splitflap"
-                project="splitflap"
+                project={project}
                 tagline="Rotating 45-Segment Display"
                 description="Coming Soon!"
                 timeframe="3 weeks"

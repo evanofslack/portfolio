@@ -1,6 +1,5 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import ProjectCardFeatured from "./ProjectCardFeatured";
 import Grid from "@material-ui/core/Grid";
 import bodyTheme from "./themes/bodyTheme";
 import Hidden from "@material-ui/core/Hidden";
