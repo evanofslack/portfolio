@@ -12,13 +12,18 @@ const useStyles = makeStyles((theme) => ({
         top: "0",
         zIndex: "1",
         background: "#0a1338",
-        padding: "2vw",
+        paddingLeft: "4.5vw",
+        paddingRight: "3vw",
+        paddingTop: "2vw",
+        paddingBottom: "2vw",
     },
     menu: {
         fontFamily: "karla",
-        fontSize: "calc(11px + .65vw)",
+        fontSize: "calc(12px + .6vw)",
         color: "white",
         margin: "1vw",
+        textTransform: "None",
+
         "&:hover": {
             color: "#ede477",
             textDecoration: "underline",
@@ -28,10 +33,25 @@ const useStyles = makeStyles((theme) => ({
             color: "#ede477",
         },
     },
-    container: {
+    links: {
         display: "flex",
         flexDirection: "row",
         justifyContent: "flex-end",
+        textTransform: "lowercase",
+    },
+    name: {
+        fontFamily: "karla",
+        fontSize: "calc(18px + .6vw)",
+        fontWeight: "400",
+        color: "#f5f5f5",
+        textTransform: "none",
+    },
+    container: {
+        width: "100%",
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "space-between",
+        alignItems: "center",
     },
 }));
 
@@ -47,45 +67,61 @@ export default function Navbar() {
             <div className={classes.root}>
                 <Toolbar>
                     <div className={classes.container}>
+                        {/* <div className={classes.name}>
+                            {" "}
+                            EVAN <br></br>SLACK.{" "}
+                        </div> */}
                         <Button
+                            className={classes.name}
                             disableRipple
-                            className={classes.menu}
                             component={NavLink}
                             to="/"
                             exact
                         >
-                            Home
+                            {" "}
+                            es.design{" "}
                         </Button>
+                        <div className={classes.links}>
+                            <Button
+                                disableRipple
+                                className={classes.menu}
+                                component={NavLink}
+                                to="/"
+                                exact
+                            >
+                                Home
+                            </Button>
 
-                        <Button
-                            disableRipple
-                            className={classes.menu}
-                            component={NavLink}
-                            to="/projects"
-                            exact
-                        >
-                            Projects
-                        </Button>
+                            <Button
+                                disableRipple
+                                className={classes.menu}
+                                component={NavLink}
+                                to="/projects"
+                                exact
+                            >
+                                Projects
+                            </Button>
 
-                        <Button
-                            disableRipple
-                            className={classes.menu}
-                            component={NavLink}
-                            to="/about"
-                            exact
-                        >
-                            About
-                        </Button>
+                            <Button
+                                disableRipple
+                                className={classes.menu}
+                                component={NavLink}
+                                to="/about"
+                                exact
+                            >
+                                About
+                            </Button>
 
-                        <Button
-                            disableRipple
-                            className={classes.menu}
-                            component={NavLink}
-                            to="/photography"
-                            exact
-                        >
-                            Photography
-                        </Button>
+                            <Button
+                                disableRipple
+                                className={classes.menu}
+                                component={NavLink}
+                                to="/photography"
+                                exact
+                            >
+                                Photography
+                            </Button>
+                        </div>
                     </div>
                 </Toolbar>
             </div>
