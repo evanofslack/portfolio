@@ -3,6 +3,8 @@ import { makeStyles } from "@material-ui/core/styles";
 import Footer from "../Footer";
 import Template from "./Template";
 import Carousel from "react-material-ui-carousel";
+import List from "@material-ui/core/List";
+import ListItem from "@material-ui/core/ListItem";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -97,7 +99,7 @@ export default function Toothbrush() {
             />
             <div className={classes.extra}>
                 <img
-                    src={`static/projects/${project}/TBT_closeup.png`}
+                    src={`/static/projects/${project}/TBT_closeup.png`}
                     alt="project"
                     className={classes.pic1}
                 />
@@ -106,15 +108,22 @@ export default function Toothbrush() {
                 <h1>My Contributions</h1>
                 <p className={classes.description}>
                     As the owner of several core mechanical concepts, I advanced the hardware all
-                    the way from ideation to final product{" "}
+                    the way from ideation to final product.{" "}
                 </p>
                 <p className={classes.description}>
-                    <li>
-                        Designed 20+ unique parts in SolidWorks for rapid prototyping with Prussia
-                        MK3 printer
-                    </li>
-                    <li>Maintained 300+ part assembly, while managing BOM, sourcing, and budget</li>
-                    <li>Integrated Arduino, motor drivers, DC pump, and LCD screen</li>
+                    <List>
+                        <ListItem>
+                            - Designed 20+ unique parts in SolidWorks for rapid prototyping with
+                            Prussia MK3 printer
+                        </ListItem>
+                        <ListItem>
+                            - Maintained 300+ part assembly, while managing BOM, sourcing, and
+                            budget
+                        </ListItem>
+                        <ListItem>
+                            - Integrated Arduino, motor drivers, DC pump, and LCD screen
+                        </ListItem>
+                    </List>
                 </p>
             </div>
             <div className={classes.extra}>
@@ -136,7 +145,7 @@ export default function Toothbrush() {
                 >
                     <div className={classes.carousel}>
                         <img
-                            src={`static/projects/${project}/TBT_top.png`}
+                            src={`/static/projects/${project}/TBT_top.png`}
                             alt="project"
                             className={classes.pic2}
                         />
@@ -144,21 +153,21 @@ export default function Toothbrush() {
 
                     <div className={classes.carousel}>
                         <img
-                            src={`static/projects/${project}/TBT_side.png`}
+                            src={`/static/projects/${project}/TBT_side.png`}
                             alt="project"
                             className={classes.pic2}
                         />
                     </div>
                     <div className={classes.carousel}>
                         <img
-                            src={`static/projects/${project}/TBT_subassembly.png`}
+                            src={`/static/projects/${project}/TBT_subassembly.png`}
                             alt="project"
                             className={classes.pic2}
                         />
                     </div>
                     <div className={classes.carousel}>
                         <img
-                            src={`static/projects/${project}/TBT_offset.png`}
+                            src={`/static/projects/${project}/TBT_offset.png`}
                             alt="project"
                             className={classes.pic2}
                         />

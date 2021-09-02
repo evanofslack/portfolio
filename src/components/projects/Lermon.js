@@ -1,6 +1,7 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Template from "./Template";
+import Footer from "../Footer";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -8,25 +9,29 @@ const useStyles = makeStyles((theme) => ({
         width: "100%",
         overflow: "auto",
     },
-})
-)
+    empty: {
+        width: "auto",
+        height: "80vh",
+        background: "white",
+    },
+}));
 export default function Lermon() {
     const classes = useStyles();
-  return (
-    <div className={classes.root}> 
-         <Template 
-          title="LERMON"
-          project = "lermon"
-          tagline="Autonomous Obstacle Detection"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-          ullamco laboris nisi ut aliquip ex ea commodo consequat."
-          timeframe="6 weeks"
-          github="www.github.com"
-          tech="OOP"
-        >
-        </Template>
-
-    </div>
-  );
+    const project = "lermon";
+    const techList = ["SolidWorks", "Python", "Sonar"];
+    return (
+        <div className={classes.root}>
+            <Template
+                title="LERMON"
+                project={project}
+                tagline="Autonomous Obstacle Detection"
+                description="Leg Extending Robot Making Obstacles Navigable - Coming Soon!"
+                timeframe="6 weeks"
+                github={false}
+                techList={techList}
+            ></Template>
+            <div className={classes.empty} />
+            <Footer />
+        </div>
+    );
 }

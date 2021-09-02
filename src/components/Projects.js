@@ -122,13 +122,13 @@ export default function Projects() {
                         {/* <Grid item xs={12} sm={6} lg={4} justify="center" alignItems="center">
                         <ProjectCard project="inkdisplay" name="Display Frame" description="Modular and expandable frame for integration and testing"/>
                     </Grid> */}
-                        <Grid item xs={12} sm={6} lg={4} justify="center" alignItems="center">
+                        {/* <Grid item xs={12} sm={6} lg={4} justify="center" alignItems="center">
                             <ProjectCard
                                 project="portfolio"
                                 name="Personal Website"
                                 description="Created with React.js and hosted with Netlify"
                             />
-                        </Grid>
+                        </Grid> */}
                     </Grid>
                 </div>
                 <Footer />

@@ -52,7 +52,7 @@ export default function GlaucomaMonitor() {
             ></Template>
             <div className={classes.extra}>
                 <img
-                    src={`static/projects/${project}/pic2.png`}
+                    src={`/static/projects/${project}/pic2.png`}
                     alt="project"
                     className={classes.pic1}
                 />

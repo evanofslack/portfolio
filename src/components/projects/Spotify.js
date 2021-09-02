@@ -55,7 +55,7 @@ export default function Spotify() {
             ></Template>
             <div className={classes.extra}>
                 <img
-                    src={`static/projects/${project}/demo.gif`}
+                    src={`/static/projects/${project}/demo.gif`}
                     alt="project"
                     className={classes.gif}
                 />

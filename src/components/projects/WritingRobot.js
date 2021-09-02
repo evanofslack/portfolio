@@ -51,7 +51,7 @@ export default function WritingRobot() {
             ></Template>
             <div className={classes.extra}>
                 <img
-                    src={`static/projects/${project}/write.gif`}
+                    src={`/static/projects/${project}/write.gif`}
                     alt="project"
                     className={classes.gif}
                 />

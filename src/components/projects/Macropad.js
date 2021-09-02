@@ -3,6 +3,8 @@ import { makeStyles } from "@material-ui/core/styles";
 import Carousel from "react-material-ui-carousel";
 import Template from "./Template";
 import Footer from "../Footer";
+import List from "@material-ui/core/List";
+import ListItem from "@material-ui/core/ListItem";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -77,7 +79,7 @@ export default function Spotify() {
             ></Template>
             <div className={classes.extra}>
                 <img
-                    src={`static/projects/${project}/rotate.gif`}
+                    src={`/static/projects/${project}/rotate.gif`}
                     alt="project"
                     className={classes.gif}
                 />
@@ -86,16 +88,20 @@ export default function Spotify() {
                 <h1>Project Overview</h1>
                 <p className={classes.description}>
                     My first real attempt at PCB layout went surprisingly well. This macropad
-                    actually gets a lot of use in my day to day as a media controller.{" "}
+                    actually gets a lot of use in my day to day as a media controller.
                 </p>
                 <p className={classes.description}>
-                    <li> Featuring Raspberry Pi Pico, Cherry MX switches, and a rotary encoder</li>
-                    <li>Board schematic and layout done in KiCAD</li>
-                    <li>
-                        Bootstrapped with open-source circuitpython Human Interface Device (HID)
-                        library
-                    </li>
-                    <li> Custom 3D-printed and laser cut housing</li>
+                    <List>
+                        <ListItem>
+                            - Featuring Raspberry Pi Pico, Cherry MX switches, and a rotary encoder
+                        </ListItem>
+                        <ListItem>- Board schematic and layout done in KiCAD</ListItem>
+                        <ListItem>
+                            - Bootstrapped with open-source circuitpython Human Interface Device
+                            (HID) library
+                        </ListItem>
+                        <ListItem>- Custom 3D-printed and laser cut housing</ListItem>
+                    </List>
                 </p>
             </div>
             <div className={classes.extra}>
@@ -117,7 +123,7 @@ export default function Spotify() {
                 >
                     <div className={classes.carousel}>
                         <img
-                            src={`static/projects/${project}/layout.png`}
+                            src={`/static/projects/${project}/layout.png`}
                             alt="project"
                             className={classes.pic2}
                         />
@@ -125,21 +131,21 @@ export default function Spotify() {
 
                     <div className={classes.carousel}>
                         <img
-                            src={`static/projects/${project}/schematic.png`}
+                            src={`/static/projects/${project}/schematic.png`}
                             alt="project"
                             className={classes.pic2}
                         />
                     </div>
                     <div className={classes.carousel}>
                         <img
-                            src={`static/projects/${project}/render1.png`}
+                            src={`/static/projects/${project}/render1.png`}
                             alt="project"
                             className={classes.pic2}
                         />
                     </div>
                     <div className={classes.carousel}>
                         <img
-                            src={`static/projects/${project}/pcb.png`}
+                            src={`/static/projects/${project}/pcb.png`}
                             alt="project"
                             className={classes.pic2}
                         />

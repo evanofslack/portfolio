@@ -2,6 +2,8 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Template from "./Template";
 import Footer from "../Footer";
+import List from "@material-ui/core/List";
+import ListItem from "@material-ui/core/ListItem";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -78,7 +80,7 @@ export default function FlowBench() {
             ></Template>
             <div className={classes.extra}>
                 <img
-                    src={`static/projects/${project}/pic2.png`}
+                    src={`/static/projects/${project}/pic2.png`}
                     alt="project"
                     className={classes.pic1}
                 />
@@ -92,20 +94,24 @@ export default function FlowBench() {
                     material.{" "}
                 </p>
                 <p className={classes.description}>
-                    <li>
-                        NI Vision Development Module software to analyze video feed from FLIR
-                        machine vision camera.
-                    </li>
-                    <li>
-                        Designed parts in SolidWorks to be CNC machined, waterjet cut, and 3D
-                        printed.
-                    </li>
-                    <li>Linear actuator precisly controlled with Arduino and stepper driver. </li>
+                    <List>
+                        <ListItem>
+                            - NI Vision Development Module software to analyze video feed from FLIR
+                            machine vision camera
+                        </ListItem>
+                        <ListItem>
+                            - Designed parts in SolidWorks to be CNC machined, waterjet cut, and 3D
+                            printed
+                        </ListItem>
+                        <ListItem>
+                            - Linear actuator precisly controlled with Arduino and stepper driver
+                        </ListItem>
+                    </List>
                 </p>
             </div>
             <div className={classes.extra}>
                 <img
-                    src={`static/projects/${project}/extra.png`}
+                    src={`/static/projects/${project}/extra.png`}
                     alt="project"
                     className={classes.pic2}
                 />

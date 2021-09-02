@@ -97,7 +97,7 @@ export default function Template(props) {
             <Navbar />
             <div className={classes.pic1Container}>
                 <img
-                    src={`static/projects/${project}/pic1.png`}
+                    src={`/static/projects/${project}/pic1.png`}
                     alt="project"
                     className={classes.pic1}
                 />
@@ -136,16 +136,12 @@ export default function Template(props) {
                                     <Tooltip title="View on Github">
                                         <IconButton
                                             href={github}
-                                            className={classes.button}
-                                            size="Large"
-                                            disableFocusRipple
-                                            disableRipple
                                             style={{
                                                 color: "#0a0a0a",
                                                 backgroundColor: "transparent",
                                             }}
                                         >
-                                            <GitHubIcon className={classes.icon} />
+                                            <GitHubIcon className={classes.icon} fontSize="large" />
                                         </IconButton>
                                     </Tooltip>
                                 </div>

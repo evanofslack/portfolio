@@ -1,6 +1,7 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Template from "./Template";
+import Footer from "../Footer";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -8,25 +9,29 @@ const useStyles = makeStyles((theme) => ({
         width: "100%",
         overflow: "auto",
     },
-})
-)
+    empty: {
+        width: "auto",
+        height: "80vh",
+        background: "white",
+    },
+}));
 export default function Inchworm() {
     const classes = useStyles();
-  return (
-    <div className={classes.root}> 
-         <Template 
-          title="CrawlerBot"
-          project = "inchworm"
-          tagline="Robotic Inchworm"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-          ullamco laboris nisi ut aliquip ex ea commodo consequat."
-          timeframe="2 weeks"
-          github="www.github.com"
-          tech="Laser Cutting"
-        >
-        </Template>
-
-    </div>
-  );
+    const project = "inchworm";
+    const techList = ["SolidWorks", "Python", "Illustrator"];
+    return (
+        <div className={classes.root}>
+            <Template
+                title="CrawlerBot"
+                project={project}
+                tagline="Robotic Inchworm"
+                description="Coming soon!"
+                timeframe="2 weeks"
+                github={false}
+                techList={techList}
+            ></Template>
+            <div className={classes.empty} />
+            <Footer />
+        </div>
+    );
 }
