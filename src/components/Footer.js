@@ -22,11 +22,6 @@ const useStyles = makeStyles((theme) => ({
         transition: "ease-in .12s",
         "&:hover": {
             color: "#40c9a9",
-            textDecoration: "underline",
-            textDecorationThickness: ".3vh",
-        },
-        "&.active": {
-            color: "#40c9a9",
         },
     },
     container: {
@@ -42,6 +37,13 @@ const useStyles = makeStyles((theme) => ({
     copyright: {
         color: "white",
         fontSize: "calc(9px + .3vw)",
+    },
+    link: {
+        textDecoration: "inherit",
+        color: "inherit",
+        "&:hover": {
+            color: "#40c9a9",
+        },
     },
 }));
 
@@ -90,7 +92,11 @@ export default function Footer() {
                     </IconButton>
                 </div>
                 <div className={classes.container}>
-                    <div className={classes.copyright}>&copy; 2021 - Evan Slack</div>
+                    <div className={classes.copyright}>
+                        <a className={classes.link} href="https://github.com/evanofslack/portfolio">
+                            &copy; 2021 &nbsp;Built by Evan Slack with react.js
+                        </a>
+                    </div>
                 </div>
             </div>
         </ThemeProvider>
