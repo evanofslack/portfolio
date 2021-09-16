@@ -18,7 +18,8 @@ const useStyles = makeStyles((theme) => ({
     button: {
         fontSize: "10vh",
         color: "white",
-        margin: "1vh 2vh",
+        marginTop: "3vh",
+        margin: "1.5vh 2vh",
         transition: "ease-in .12s",
         "&:hover": {
             color: "#40c9a9",

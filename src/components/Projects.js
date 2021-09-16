@@ -17,8 +17,8 @@ const useStyles = makeStyles((theme) => ({
         background: "#0a1338", // Primary Navy
     },
     title: {
-        paddingTop: "calc(30px + 1vh)",
-        paddingBottom: "calc(20px + 1vh)",
+        paddingTop: "calc(50px + 1vh)",
+        paddingBottom: "calc(30px + 1vh)",
         fontSize: "calc(26px + 1.6vw)",
         color: "#0a1338",
         //color: "#3f4047",
@@ -31,9 +31,10 @@ const useStyles = makeStyles((theme) => ({
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        paddingRight: "2vw",
-        paddingLeft: "2vw",
-        paddingBottom: "2vw",
+        paddingRight: "4vw",
+        paddingLeft: "4vw",
+        paddingBottom: "55px",
+        // paddingBottom: "2vw",
         backgroundColor: "#f5f5f5",
     },
     shadow: {

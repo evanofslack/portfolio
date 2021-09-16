@@ -39,7 +39,7 @@ const useStyles = makeStyles((theme) => ({
         alignItems: "center",
         flexDirection: "row",
         flexWrap: "wrap",
-        paddingBottom: "1.8vh",
+        paddingBottom: "2.5vh",
     },
     header: {
         fontSize: "calc(30px + 3vw)",
@@ -55,7 +55,7 @@ const useStyles = makeStyles((theme) => ({
         borderRadius: ".4vh",
     },
     paragraph: {
-        fontSize: "calc(12px + .5vw)",
+        fontSize: "calc(12px + .4vw)",
         fontWeight: "340",
         lineHeight: "1.6em",
         marginBottom: "0",
@@ -90,34 +90,33 @@ export default function About() {
                         </div>
 
                         <p className={classes.paragraph}>
-                            I'm a mechanical engineer with a passion for designing integrated
-                            products that seamlessly combine hardware and software.
+                            I graduated from Tufts University in 2021 with a degree in Mechanical
+                            Engineering. During my degree, I focused on robotics, hardware design,
+                            and user experience.
                         </p>
 
                         <p className={classes.paragraph}>
-                            I'm currently working as a mechanical design engineer on the new product
+                            Currently I'm working as a mechanical design engineer on the new product
                             development team at{" "}
                             <a className={classes.link} href="https://www.sensata.com">
                                 Sensata Technologies
                             </a>
-                            , designing innovative IoT sensors. I've previously interned at &nbsp;{" "}
+                            , designing industrial IoT sensors. I've previously interned at{" "}
                             <a className={classes.link} href="https://solchroma.com">
                                 Solchroma Technologies
                             </a>{" "}
                             and{" "}
                             <a className={classes.link} href="https://www.precisionnanosystems.com">
-                                Precision Nanosystems
-                            </a>{" "}
-                            as a mechanical engineer.
+                                Precision Nanosystems.
+                            </a>
                         </p>
 
                         <p className={classes.paragraph}>
-                            These days I find myself jumping from project to project trying to make
-                            cool stuff. Whether it be learning about some obscure Python library, 3D
-                            printing fun models, or setting up a Docker container, I'm always trying
-                            to learn and absorb new technologies. Other than that, I spend my free
-                            time taking analog photos on my Nikon FM2, attempting to play golf, and
-                            curating my spotify playlists.
+                            I spend my free time taking photos on my Nikon FM2, curating my spotify
+                            playlists, and struggling to make par on the golf course. My greatest
+                            strength is that I'm pretty good at yoyoing. My greatest weakness is how
+                            easily I can fall down the Wikapedia rabbit hole and keep reading random
+                            articles.
                         </p>
                         <p className={classes.paragraph}>
                             If you'd like to collaborate or just have a chat, please feel free to
