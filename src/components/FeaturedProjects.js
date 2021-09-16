@@ -33,8 +33,8 @@ const useStyles = makeStyles((theme) => ({
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        paddingRight: "2vw",
-        paddingLeft: "2vw",
+        paddingRight: "4vw",
+        paddingLeft: "4vw",
         paddingBottom: "2vw",
     },
     mediaQueryMobile: {

@@ -17,10 +17,10 @@ const useStyles = makeStyles((theme) => ({
         background: "#0a1338", // Primary Navy
     },
     title: {
-        paddingTop: "calc(40px + 3vh)",
-        paddingBottom: "calc(40px + 3vh)",
+        paddingTop: "calc(50px + 1vh)",
+        paddingBottom: "calc(30px + 1vh)",
         fontSize: "calc(26px + 1.6vw)",
-        color: "#3f4047",
+        color: "#0a1338",
         fontWeight: "600",
         textAlign: "center",
         fontFamily: "barlow",

@@ -101,8 +101,7 @@ const useStyles = makeStyles((theme) => ({
         flexDirection: "column",
         alignItems: "center",
         background: "#f5f5f5",
-
-        paddingBottom: "40px",
+        paddingBottom: "65px",
     },
     about: {
         paddingTop: "15px",
@@ -181,12 +180,10 @@ export default function Home() {
                         I'm a design oriented engineer with experience across the full stack.
                         Currently working at Sensata Technologies creating IoT sensors.
                         <br></br>
-                        <br></br>
-                        I'm excited about the intersection of product design, software architecture,
-                        and embedded systems.
-                        <br></br>
-                        <br></br>I spend my free time taking photos on my Nikon FM2, curating my
-                        spotify playlists, and struggling to make par on the golf course.
+                        <br></br>I take a creative approach to problem solving, leveraging my
+                        experience across many domains. From laying out a PCB and writing embedded
+                        firmware all the way up to deploying a fullstack web application, I'm always
+                        learning and building with new technologies.
                         <br></br>
                         <br></br>
                         Read a bit more about me{" "}
