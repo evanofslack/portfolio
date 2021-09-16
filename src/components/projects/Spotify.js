@@ -36,7 +36,7 @@ export default function Spotify() {
     const classes = useStyles();
     const project = "spotify";
     const github = "https://github.com/evanofslack/ePaper-Spotify-Clock";
-    const techList = ["Python", "API requests", "Adobe Illustrator"];
+    const techList = ["Python", "Bash", "API requests", "Adobe Illustrator"];
 
     return (
         <div className={classes.root}>

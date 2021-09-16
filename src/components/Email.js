@@ -51,9 +51,9 @@ const useStyles = makeStyles((theme) => ({
         outline: "none",
         webkitTransition: "0.5s",
         transition: "0.5s",
-        "&:focus": {
-            backgroundColor: "#f5f5f5",
-        },
+        // "&:focus": {
+        //     backgroundColor: "#f5f5f5",
+        // },
     },
     inputEmail: {
         alignSelf: "center",
@@ -75,9 +75,9 @@ const useStyles = makeStyles((theme) => ({
         outline: "none",
         webkitTransition: "0.5s",
         transition: "0.5s",
-        "&:focus": {
-            backgroundColor: "#f5f5f5",
-        },
+        // "&:focus": {
+        //     backgroundColor: "#f5f5f5",
+        // },
     },
     inputMessage: {
         gridArea: "inputMessage",
@@ -99,9 +99,9 @@ const useStyles = makeStyles((theme) => ({
         outline: "none",
         webkitTransition: "0.5s",
         transition: "0.5s",
-        "&:focus": {
-            backgroundColor: "#f5f5f5",
-        },
+        // "&:focus": {
+        //     backgroundColor: "#f5f5f5",
+        // },
     },
     labelName: {
         textAlign: "left",

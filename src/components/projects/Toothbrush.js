@@ -79,6 +79,20 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: "center",
         margin: "0",
     },
+    responsive_video: {
+        width: "100%",
+        position: "relative",
+        height: "0",
+        overflow: "hidden",
+        paddingBottom: "56.25%",
+    },
+    iframe: {
+        position: "absolute",
+        top: "0",
+        left: "0",
+        width: "100%",
+        height: "100%",
+    },
 }));
 export default function Toothbrush() {
     const classes = useStyles();
@@ -176,15 +190,16 @@ export default function Toothbrush() {
             </div>
             <div className={classes.video}>
                 <h2>Video Demonstration</h2>
-                <iframe
-                    width="800px"
-                    height="451px"
-                    src="https://www.youtube.com/embed/Z0ocjP-AUJQ"
-                    title="YouTube video player"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen
-                ></iframe>
+                <div className={classes.responsive_video}>
+                    <iframe
+                        className={classes.iframe}
+                        src="https://www.youtube.com/embed/Z0ocjP-AUJQ"
+                        title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen
+                    ></iframe>
+                </div>
             </div>
             <Footer />
         </div>

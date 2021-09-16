@@ -22,6 +22,7 @@ const useStyles = makeStyles((theme) => ({
     },
     about: {
         width: "70vw",
+        maxWidth: "700px",
         paddingLeft: "3vw",
         paddingRight: "3vw",
         paddingBottom: "3vw",
@@ -43,8 +44,8 @@ const useStyles = makeStyles((theme) => ({
     header: {
         fontSize: "calc(30px + 3vw)",
         fontWeight: "600",
-        marginTop: "0",
-        marginBottom: "0",
+        marginTop: "20px",
+        marginBottom: "30px",
         marginRight: "0vw",
         fontFamily: "barlow",
     },
@@ -59,6 +60,8 @@ const useStyles = makeStyles((theme) => ({
         lineHeight: "1.6em",
         marginBottom: "0",
         fontFamily: "barlow",
+        marginRight: "20px",
+        marginLeft: "20px",
     },
     link: {
         textDecoration: "inherit",

@@ -36,7 +36,7 @@ export default function GlaucomaMonitor() {
     const classes = useStyles();
     const project = "glaucoma";
     const github = false;
-    const techList = ["Miro", "PhotoView360", "Product Definition"];
+    const techList = ["UX/UI", "Product Developement", "PhotoView360"];
     return (
         <div className={classes.root}>
             <Template

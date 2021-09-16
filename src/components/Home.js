@@ -1,14 +1,16 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
+import { Link } from "react-router-dom";
+import { ThemeProvider } from "@material-ui/core";
+import { NavLink } from "react-router-dom";
+
 import MobileNavbar from "./MobileNavbar";
 import Navbar from "./Navbar";
-import { ThemeProvider } from "@material-ui/core";
 import myTheme from "./themes/myTheme";
 import TextCycler from "./TextCycler";
 import FeaturedProjects from "./FeaturedProjects";
 import Footer from "./Footer";
 import Button from "@material-ui/core/Button";
-import { NavLink } from "react-router-dom";
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 
 const useStyles = makeStyles((theme) => ({
@@ -176,22 +178,23 @@ export default function Home() {
                 <div className={classes.about_header}>About Me</div>
                 <div className={classes.about_container}>
                     <p className={classes.about}>
-                        I'm graduated from Tufts University in 2021 with a degree in mechanical
-                        engineering. I currently work at Sensata Technologies designing IoT sensors
-                        for industrial applications.
+                        I'm a design oriented engineer with experience across the full stack.
+                        Currently working at Sensata Technologies creating IoT sensors.
                         <br></br>
                         <br></br>
-                        Recently I've been working on fullstack web applications with Python,
-                        Postgres and React. I'm excited about the intersection of product design,
-                        software architecture, and embedded systems.
+                        I'm excited about the intersection of product design, software architecture,
+                        and embedded systems.
+                        <br></br>
+                        <br></br>I spend my free time taking photos on my Nikon FM2, curating my
+                        spotify playlists, and struggling to make par on the golf course.
                         <br></br>
                         <br></br>
                         Read a bit more about me{" "}
-                        <a className={classes.link} href="/about">
+                        <Link className={classes.link} to="/about">
                             <u>here</u> or{" "}
-                            <a className={classes.link} href="mailto:evan.slack@outlook.com">
-                                <u>contact me</u>.
-                            </a>
+                        </Link>
+                        <a className={classes.link} href="mailto:evan.slack@outlook.com">
+                            <u>contact me</u>.
                         </a>
                     </p>
                 </div>
