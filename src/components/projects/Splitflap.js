@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 export default function Spotify() {
     const classes = useStyles();
-    const project = "inchworm";
+    const project = "splitflap";
     const github = "https://github.com/evanofslack/splitflap";
     const techList = ["SolidWorks", "Open Source", "Arduino"];
     return (

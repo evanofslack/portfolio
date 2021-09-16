@@ -19,6 +19,7 @@ const useStyles = makeStyles((theme) => ({
         fontFamily: "karla",
         fontSize: "calc(18px + .6vw)",
         fontWeight: "400",
+        textTransform: "none",
         color: "#f5f5f5",
     },
     container: {
@@ -82,7 +83,9 @@ export default function MobileNavbar() {
         <ThemeProvider theme={navTheme}>
             <div className={classes.root}>
                 <div className={classes.container}>
-                    <div className={classes.name}>es.design</div>
+                    <Button className={classes.name} component={NavLink} to="/" exact disableRipple>
+                        es.design
+                    </Button>
                     <div className={classes.menuButton}>
                         <IconButton
                             onClick={handleDrawerOpen}
