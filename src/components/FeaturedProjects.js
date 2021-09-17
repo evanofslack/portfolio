@@ -15,19 +15,20 @@ const useStyles = makeStyles((theme) => ({
         padding: "0vw",
     },
     spacing: {
-        fontSize: "calc(26px + 1.6vw)",
         color: "#3f4047",
-        fontWeight: "600",
         textAlign: "center",
-        fontFamily: "barlow",
     },
     title: {
+        fontSize: "calc(20px + 1.6vw)",
         paddingTop: "80px",
-        paddingBottom: "20px",
+        paddingBottom: "15px",
         borderRadius: "5px",
         wordWrap: "normal",
         overflowWrap: "normal",
         color: "#0a1338",
+        fontFamily: "manrope",
+        fontWeight: "600",
+        letterSpacing: "-.11rem",
     },
     container: {
         display: "flex",
@@ -55,7 +56,7 @@ export default function FeaturedProjects() {
         <ThemeProvider theme={bodyTheme}>
             <div className={classes.root}>
                 <div className={classes.spacing}>
-                    <div className={classes.title}>Featured</div>
+                    <div className={classes.title}>Featured &nbsp;Projects</div>
                 </div>
                 <div className={classes.container}>
                     <Grid container justify="center" alignItems="center" spacing={0}>
