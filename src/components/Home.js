@@ -23,14 +23,17 @@ const useStyles = makeStyles((theme) => ({
         background: "#0a1338", // Primary Navy
     },
     name: {
-        marginTop: "5vh",
+        marginTop: "calc(50px + 2vw)",
         marginLeft: "8%",
         marginRight: "5%",
-        marginBottom: "6vh",
+        marginBottom: "calc(40px + 2vw)",
         fontSize: "calc(40px + 4vw)",
         color: "white",
         transform: "translateY(0)",
+        fontFamily: "manrope",
+        fontWeight: "800",
     },
+
     gradient: {
         "&:hover": {
             background: "linear-gradient(to right bottom, #430089, #82ffa1)",
@@ -46,14 +49,17 @@ const useStyles = makeStyles((theme) => ({
         alignItems: "center",
         marginLeft: "8%",
         marginRight: "5%",
-        paddingBottom: "12vh",
+        paddingBottom: "calc(90px + 3.5vw)",
     },
     typing: {
         color: "#40c9a9", // Secondary Turquoise
-        fontSize: "calc(12px + 2vw)",
-        fontWeight: "600",
+        fontSize: "calc(16px + 1.6vw)",
         wordWrap: "break-word",
         overflowWrap: "break-word",
+        fontFamily: "manrope",
+        fontWeight: "600",
+        letterSpacing: "-.1rem",
+        lineHeight: "1rem",
     },
 
     projectCards: {
@@ -66,11 +72,14 @@ const useStyles = makeStyles((theme) => ({
         alignItems: "center",
         justifyContent: "center",
         fontSize: "calc(24px + 5vw)",
-        paddingTop: "10px",
+        paddingTop: "5px",
         paddingBottom: "2vh",
     },
 
     projectButton: {
+        fontFamily: "manrope",
+        fontWeight: "500",
+        letterSpacing: "-.06rem",
         fontSize: "calc(14px + 1vw)",
         textTransform: "capitalize",
         background: "white",
@@ -91,10 +100,11 @@ const useStyles = makeStyles((theme) => ({
         overflowWrap: "normal",
         color: "#0a1338",
         background: "#f5f5f5",
-        fontSize: "calc(26px + 1.6vw)",
-        fontWeight: "600",
+        fontSize: "calc(20px + 1.6vw)",
         textAlign: "center",
-        fontFamily: "barlow",
+        fontFamily: "manrope",
+        fontWeight: "600",
+        letterSpacing: "-.11rem",
     },
     about_container: {
         display: "flex",
@@ -115,10 +125,10 @@ const useStyles = makeStyles((theme) => ({
         overflowWrap: "normal",
         color: "#0a1338",
         background: "white",
-        fontSize: "calc(13px + .4vw)",
-        fontWeight: "340",
+        fontSize: "calc(14px + .4vw)",
+        fontWeight: "300",
         lineHeight: "1.6em",
-        fontFamily: "barlow",
+        fontFamily: "mada",
         boxShadow: ".5px .5px 2px lightGray",
     },
     link: {
@@ -151,7 +161,7 @@ export default function Home() {
                     <div>
                         <div className={classes.name}>Hi! I'm Evan</div>
                         <div className={classes.typeContainer}>
-                            <div className={classes.typing}>Mechanical Engineer &nbsp;</div>
+                            <div className={classes.typing}>Mechanical &nbsp;Engineer &nbsp;</div>
                             <div className={classes.typing}>and &nbsp;</div>
                             <div className={classes.typing}>
                                 <TextCycler />
@@ -170,7 +180,7 @@ export default function Home() {
                         to="/projects"
                         exact
                     >
-                        All Projects
+                        All &nbsp;Projects
                         <ChevronRightIcon />
                     </Button>
                 </div>

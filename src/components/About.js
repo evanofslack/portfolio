@@ -43,11 +43,12 @@ const useStyles = makeStyles((theme) => ({
     },
     header: {
         fontSize: "calc(30px + 3vw)",
-        fontWeight: "600",
         marginTop: "20px",
         marginBottom: "30px",
         marginRight: "0vw",
-        fontFamily: "barlow",
+        fontFamily: "manrope",
+        fontWeight: "600",
+        letterSpacing: "-.12rem",
     },
     image: {
         width: "calc(70px + 30%)",
@@ -56,10 +57,10 @@ const useStyles = makeStyles((theme) => ({
     },
     paragraph: {
         fontSize: "calc(12px + .4vw)",
-        fontWeight: "340",
+        fontWeight: "300",
         lineHeight: "1.6em",
         marginBottom: "0",
-        fontFamily: "barlow",
+        fontFamily: "mada",
         marginRight: "20px",
         marginLeft: "20px",
     },
@@ -91,7 +92,7 @@ export default function About() {
 
                         <p className={classes.paragraph}>
                             I graduated from Tufts University in 2021 with a degree in Mechanical
-                            Engineering. During my degree, I focused on robotics, hardware design,
+                            Engineering. During my degree I focused on robotics, hardware design,
                             and user experience.
                         </p>
 

@@ -21,10 +21,11 @@ const useStyles = makeStyles((theme) => ({
         paddingBottom: "calc(30px + 1vh)",
         fontSize: "calc(26px + 1.6vw)",
         color: "#0a1338",
-        fontWeight: "600",
         textAlign: "center",
-        fontFamily: "barlow",
         backgroundColor: "white",
+        fontFamily: "manrope",
+        fontWeight: "600",
+        letterSpacing: "-.13rem",
     },
     container: {
         display: "flex",
@@ -49,7 +50,7 @@ export default function Photography() {
                     <Navbar />
                 </div>
                 <div className={classes.title}>
-                    Analog Captures
+                    Analog &nbsp;Captures
                     <div className={classes.container}>
                         <Grid container justify="center" alignItems="center" spacing={0}>
                             <Grid item xs={12} sm={8} justify="center" alignItems="center">

@@ -9,7 +9,13 @@ export default function TextCycler() {
     return (
         <ThemeProvider theme={myTheme}>
             <div>
-                <TextLoop children={items} duration={2000} />
+                <TextLoop
+                    children={items}
+                    // duration={2500}
+                    fade={true}
+                    interval={3500}
+                    springConfig={{ stiffness: 70, damping: 10 }}
+                />
             </div>
         </ThemeProvider>
     );
