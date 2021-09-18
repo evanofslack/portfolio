@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
         marginLeft: "8%",
         marginRight: "5%",
         marginBottom: "calc(40px + 2vw)",
-        fontSize: "calc(40px + 4vw)",
+        fontSize: "calc(35px + 4vw)",
         color: "white",
         transform: "translateY(0)",
         fontFamily: "manrope",
@@ -53,7 +53,7 @@ const useStyles = makeStyles((theme) => ({
     },
     typing: {
         color: "#40c9a9", // Secondary Turquoise
-        fontSize: "calc(16px + 1.6vw)",
+        fontSize: "calc(12px + 1.6vw)",
         wordWrap: "break-word",
         overflowWrap: "break-word",
         fontFamily: "manrope",

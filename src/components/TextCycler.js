@@ -4,17 +4,16 @@ import myTheme from "./themes/myTheme";
 import TextLoop from "react-text-loop";
 
 export default function TextCycler() {
-    const items = ["Designer", "Tinkerer", "Developer", "Creator", "Photographer"];
+    const items = ["Designer", "Creator", "Tinkerer", "Developer", "Photographer"];
 
     return (
         <ThemeProvider theme={myTheme}>
             <div>
                 <TextLoop
                     children={items}
-                    // duration={2500}
                     fade={true}
                     interval={3500}
-                    springConfig={{ stiffness: 70, damping: 10 }}
+                    springConfig={{ stiffness: 70, damping: 12 }}
                 />
             </div>
         </ThemeProvider>
