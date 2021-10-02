@@ -42,7 +42,8 @@ const useStyles = makeStyles((theme) => ({
         paddingBottom: "2.5vh",
     },
     header: {
-        fontSize: "calc(30px + 3vw)",
+        fontSize: "calc(26px + 1.6vw)",
+        // fontSize: "calc(30px + 3vw)",
         marginTop: "20px",
         marginBottom: "30px",
         marginRight: "0vw",
@@ -116,8 +117,7 @@ export default function About() {
                             I spend my free time taking photos on my Nikon FM2, curating my spotify
                             playlists, and struggling to make par on the golf course. My greatest
                             strength is that I'm pretty good at yoyoing. My greatest weakness is how
-                            easily I can fall down the Wikapedia rabbit hole and keep reading random
-                            articles.
+                            easily I fall down Wikipedia rabbit holes.
                         </p>
                         <p className={classes.paragraph}>
                             If you'd like to collaborate or just have a chat, please feel free to
