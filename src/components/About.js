@@ -43,7 +43,6 @@ const useStyles = makeStyles((theme) => ({
     },
     header: {
         fontSize: "calc(26px + 1.6vw)",
-        // fontSize: "calc(30px + 3vw)",
         marginTop: "20px",
         marginBottom: "30px",
         marginRight: "0vw",
