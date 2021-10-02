@@ -57,7 +57,7 @@ const useStyles = makeStyles((theme) => ({
         wordWrap: "break-word",
         overflowWrap: "break-word",
         fontFamily: "manrope",
-        fontWeight: "600",
+        fontWeight: "500",
         letterSpacing: "-.1rem",
         lineHeight: "1rem",
     },
