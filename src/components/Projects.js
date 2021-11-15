@@ -59,13 +59,6 @@ export default function Projects() {
                     <Grid container justify="center" alignItems="flex-start" spacing={0}>
                         <Grid item xs={12} sm={6} lg={4} justify="center" alignItems="center">
                             <ProjectCard
-                                project="flowbench"
-                                name="FlowBench"
-                                description="Jig to quantify microfluidic inkflow"
-                            />
-                        </Grid>
-                        <Grid item xs={12} sm={6} lg={4} justify="center" alignItems="center">
-                            <ProjectCard
                                 project="toothbrush"
                                 name="Toothbrush Tester"
                                 description="Lifetime brushing simulation device"
