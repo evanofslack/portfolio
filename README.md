@@ -3,7 +3,7 @@
 
 ### React.js App - source for www.evanslackdesign.com
 
-* Bootsrapped with [Create React App](https://github.com/facebook/create-react-app).
+* Bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 * With styles from [MaterialUI](https://material-ui.com/).
 * Hosted with [Netlify](https://www.netlify.com/).
 
