@@ -83,17 +83,17 @@ export default function About() {
                     <div className={classes.about}>
                         <div className={classes.imageContainer}>
                             <h1 className={classes.header}>About Me</h1>
-                            <img
+                            {/* <img
                                 src="/static/headshot.jpeg"
                                 alt="headshot"
                                 className={classes.image}
-                            />
+                            /> */}
                         </div>
 
                         <p className={classes.paragraph}>
                             I graduated from Tufts University in 2021 with a degree in Mechanical
-                            Engineering. During my degree I focused on robotics, hardware design,
-                            and user experience.
+                            Engineering. During my degree I focused on hardware design, programming,
+                            and robotics.
                         </p>
 
                         <p className={classes.paragraph}>

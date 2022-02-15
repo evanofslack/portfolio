@@ -32,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
         alightItems: "center",
     },
     icon: {
-        fontSize: "4vh",
+        fontSize: "2rem",
         backgroundColor: "transparent",
     },
     copyright: {

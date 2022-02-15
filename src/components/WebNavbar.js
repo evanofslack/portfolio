@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Toolbar from "@material-ui/core/Toolbar";
 import { ThemeProvider } from "@material-ui/core";
@@ -58,19 +58,11 @@ const useStyles = makeStyles((theme) => ({
 export default function Navbar() {
     const classes = useStyles();
 
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    });
-
     return (
         <ThemeProvider theme={navTheme}>
             <div className={classes.root}>
                 <Toolbar>
                     <div className={classes.container}>
-                        {/* <div className={classes.name}>
-                            {" "}
-                            EVAN <br></br>SLACK.{" "}
-                        </div> */}
                         <Button
                             className={classes.name}
                             disableRipple
@@ -79,7 +71,7 @@ export default function Navbar() {
                             exact
                         >
                             {" "}
-                            es.design{" "}
+                            es.dev{" "}
                         </Button>
                         <div className={classes.links}>
                             <Button

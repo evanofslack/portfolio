@@ -84,7 +84,7 @@ export default function MobileNavbar() {
             <div className={classes.root}>
                 <div className={classes.container}>
                     <Button className={classes.name} component={NavLink} to="/" exact disableRipple>
-                        es.design
+                        es.dev
                     </Button>
                     <div className={classes.menuButton}>
                         <IconButton
