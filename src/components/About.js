@@ -4,7 +4,6 @@ import Navbar from "./Navbar";
 import { ThemeProvider } from "@material-ui/core";
 import bodyTheme from "./themes/bodyTheme";
 import Footer from "./Footer";
-import ParticleBackground from "./ParticleBackground";
 import Email from "./Email";
 
 const useStyles = makeStyles((theme) => ({
@@ -31,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
         color: "#0a1338",
         background: "#f5f5f5",
         borderRadius: ".7vh",
-        boxShadow: "0px 0px 6px lightGray",
+        boxShadow: "0px 0px 3px lightGray",
     },
     imageContainer: {
         display: "flex",
@@ -126,7 +125,6 @@ export default function About() {
                     </div>
                 </div>
                 <Footer />
-                <ParticleBackground />
             </div>
         </ThemeProvider>
     );
