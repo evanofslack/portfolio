@@ -187,13 +187,13 @@ export default function Home() {
                 <div className={classes.about_header}>About Me</div>
                 <div className={classes.about_container}>
                     <p className={classes.about}>
-                        I'm a design oriented engineer with experience across the full stack.
-                        Currently working at Sensata Technologies creating IoT sensors.
+                        I'm a design oriented engineer with experience building hardware and
+                        software. Currently working at Sensata Technologies creating IoT sensors.
                         <br></br>
                         <br></br>I take a creative approach to problem solving, leveraging my
-                        experience across many domains. From laying out a PCB and writing embedded
-                        firmware all the way up to deploying a fullstack web application, I'm always
-                        learning and building with new technologies.
+                        experience across many domains. From PCB layout and embedded firmware all
+                        the way up to fullstack web application deployment, I'm always learning and
+                        building with new technologies.
                         <br></br>
                         <br></br>
                         Read a bit more about me{" "}
